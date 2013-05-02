@@ -1,0 +1,9 @@
+V3 6
+FL /home/cc/cs150/sp13/class/cs150-bj/project/src/FIFOGen/fifo_generator_v9_1/implement/../example_design/fifo_generator_v9_1_exdes.vhd 2013/04/09.21:08:50 P.15xf
+EN work/fifo_generator_v9_1_exdes 1365803967 \
+      FL /home/cc/cs150/sp13/class/cs150-bj/project/src/FIFOGen/fifo_generator_v9_1/implement/../example_design/fifo_generator_v9_1_exdes.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
+      PB ieee/STD_LOGIC_UNSIGNED 1335251625 LB unisim PH unisim/VCOMPONENTS 1335251629
+AR work/fifo_generator_v9_1_exdes/xilinx 1365803968 \
+      FL /home/cc/cs150/sp13/class/cs150-bj/project/src/FIFOGen/fifo_generator_v9_1/implement/../example_design/fifo_generator_v9_1_exdes.vhd \
+      EN work/fifo_generator_v9_1_exdes 1365803967 CP bufg CP fifo_generator_v9_1

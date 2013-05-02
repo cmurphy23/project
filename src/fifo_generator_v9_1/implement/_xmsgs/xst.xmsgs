@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-bj/project/src/FIFOGen/fifo_generator_v9_1/implement/../example_design/fifo_generator_v9_1_exdes.vhd</arg>&quot; line <arg fmt="%d" index="2">128</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fifo_generator_v9_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">ALMOST_FULL</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">WR_ACK</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">EMPTY</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">OVERFLOW</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">VALID</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">FULL</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(9)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(8)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(7)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(6)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(5)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(4)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(3)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(2)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(1)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DATA_COUNT(0)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DOUT(7)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DOUT(6)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DOUT(5)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DOUT(4)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DOUT(3)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DOUT(2)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DOUT(1)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">DOUT(0)</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">fifo_generator_v9_1</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+</messages>
+

@@ -1,0 +1,8 @@
+module VolumeMgr(volume,counter,data);
+
+   input [7:0] volume;
+   input [5:0] counter;
+   output [17:0] data;
+
+
+   reg [17:0] wave [63:0]

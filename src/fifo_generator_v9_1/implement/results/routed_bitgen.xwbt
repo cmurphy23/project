@@ -1,0 +1,7 @@
+INFILE=/home/cc/cs150/sp13/class/cs150-bj/project/src/FIFOGen/fifo_generator_v9_1/implement/results/routed.ncd
+OUTFILE=/home/cc/cs150/sp13/class/cs150-bj/project/src/FIFOGen/fifo_generator_v9_1/implement/results/routed.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=/home/cc/cs150/sp13/class/cs150-bj/project/src/FIFOGen/fifo_generator_v9_1/implement/results
+LICENSE=ISE
+USER_INFO=__174112198_174112199_174416789

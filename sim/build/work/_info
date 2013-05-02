@@ -1,0 +1,298 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/cc/cs150/sp13/class/cs150-az/project/sim/build
+T_opt
+V_>zR0W=5_5QcbQXoCXZJJ2
+04 4 4 work glbl fast 0
+04 9 4 work testbench fast 0
+=1-00123f70d1ff-51721b8c-eded9-5e31
+o-quiet -auto_acc_if_foreign -work work -L unisims_ver -L unimacro_ver -L xilinxcorelib_ver -L secureip
+n@_opt
+OL;O;10.1b_2;51
+vAudioBuffer
+I5RAz:cfGR:e`YcklX4odk0
+VQ]H=D9nM;^ZbOWE^3[<SG1
+Z1 d/home/cc/cs150/sp13/class/cs150-az/project/sim/build
+w1366405488
+8../../src/AudioBuffer.v
+F../../src/AudioBuffer.v
+L0 1
+Z2 OL;L;10.1b_2;51
+r1
+31
+Z3 !s108 1366432651.834834
+Z4 !s107 ../../src/AudioBuffer.v|../../src/chipscope_icon.v|../../src/chipscope_ila.v|../../src/Debouncer.v|../../src/Example.v|../../src/FPGA_TOP_ML505.v|../../src/noise_gen.v|../../src/RAMB16_S18_S18.v|../../src/Register.v|../../src/testbench.v|../../src/DPRAM.v|../../src/DPRAM1024.v|../../src/WaveGen.v|
+Z5 !s90 +acc|-source|-nocovercells|+incdir+../../src+incdir+../../src/chipscope_icon.constraints+incdir+../../src/chipscope_ila.constraints+incdir+../../src/tmp+incdir+../../src/tmp/_cg+incdir+../../src/tmp/_xmsgs+incdir+../../src/_xmsgs|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|../../src/WaveGen.v|../../src/DPRAM1024.v|../../src/DPRAM.v|../../src/testbench.v|../../src/Register.v|../../src/RAMB16_S18_S18.v|../../src/noise_gen.v|../../src/FPGA_TOP_ML505.v|../../src/Example.v|../../src/Debouncer.v|../../src/chipscope_ila.v|../../src/chipscope_icon.v|../../src/AudioBuffer.v|
+Z6 !s102 -nocovercells
+Z7 o+acc -source -nocovercells -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z8 !s92 +acc -source -nocovercells +incdir+../../src+incdir+../../src/chipscope_icon.constraints+incdir+../../src/chipscope_ila.constraints+incdir+../../src/tmp+incdir+../../src/tmp/_cg+incdir+../../src/tmp/_xmsgs+incdir+../../src/_xmsgs -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@audio@buffer
+!s100 D]h_TE]YBHgB<?8h5ILnI0
+!i10b 1
+!s85 0
+vchipscope_icon
+Id:g0bac5=enMkA@A^zeY]1
+V`O>3G7E9J4b8;h1=?j1[o1
+R1
+w1365623685
+8../../src/chipscope_icon.v
+F../../src/chipscope_icon.v
+L0 21
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+!s100 >NOWP]kC5a=@SDJeULb>C2
+!i10b 1
+!s85 0
+vchipscope_ila
+Ic5D0ZRX?dbBSJE7kCG?bW0
+VJL94:7=ST09O]i2_^5j`F3
+R1
+w1365624096
+8../../src/chipscope_ila.v
+F../../src/chipscope_ila.v
+L0 21
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+!s100 m=7hGoj`dcN6>nZm_Go220
+!i10b 1
+!s85 0
+vDebouncer
+Ia;:TWb3Z6Uf3kk7k4D>Mh0
+Vbj=HHP7ajgnOVHd5fhmh^0
+R1
+w1363804565
+8../../src/Debouncer.v
+F../../src/Debouncer.v
+L0 4
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+n@debouncer
+!s100 C0`0Q]7n;8kj[K8NULkVn3
+!i10b 1
+!s85 0
+vExample
+I34C[nJfESUC>IT`9gPc4>3
+V_0:VKIcGR;f9KZ_;AKI=N0
+R1
+w1366230474
+8../../src/Example.v
+F../../src/Example.v
+L0 3
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+n@example
+!s100 MTGQ_Fg^_<P=5cd4zM;6G3
+!i10b 1
+!s85 0
+vglbl
+Ie=ZS6Q:jeXZ[e[Y1P@?F90
+VM[9mS]S:KA1i4VeCMX35[3
+R1
+w1335236620
+8/opt/Xilinx/14.1/ISE_DS/ISE/verilog/src/glbl.v
+F/opt/Xilinx/14.1/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R2
+r1
+31
+R7
+R6
+!s100 7J1niELK7Y2aOLFBHZ9413
+!s108 1366403489.257363
+!s107 /opt/Xilinx/14.1/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 +acc|-vopt|-source|-nocovercells|/opt/Xilinx/14.1/ISE_DS/ISE/verilog/src/glbl.v|
+!i10b 1
+!s85 0
+vml505top
+ImhK7QKUX9>6;jGoSTcOMF1
+VR^alPGzA7f3f_MXORz`oc2
+R1
+w1366407554
+8../../src/FPGA_TOP_ML505.v
+F../../src/FPGA_TOP_ML505.v
+L0 1
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+!s100 WQW0>c`A<QZ<nzQzG3Mel1
+!i10b 1
+!s85 0
+vnoise_gen
+I4kM1jeF2X6P<Z>l;:?`;L0
+Voe@gVL2AVd2gb8f6=R<zE2
+R1
+w1363748375
+8../../src/noise_gen.v
+F../../src/noise_gen.v
+L0 1
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+!s100 NJW;C>:PgQde8?I`oO1@P3
+!i10b 1
+!s85 0
+vRAMB16_S18_S18
+IiA>RXD3]NGL2[_HbRFMAX3
+V?T]6J>Aa6D2LccRLBiNV41
+R1
+w1366344096
+8../../src/RAMB16_S18_S18.v
+F../../src/RAMB16_S18_S18.v
+L0 25
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+n@r@a@m@b16_@s18_@s18
+!s100 IZ@JFHR2RoZF31UVo]Dm32
+!i10b 1
+!s85 0
+vRegister
+I3dgT65jF<SN;Q153nNW?03
+VB[Xo3YILJ:?gZCQTmgZlH0
+R1
+w1363804441
+8../../src/Register.v
+F../../src/Register.v
+L0 46
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+n@register
+!s100 =3hR>`PT7clD>CPCMH<LW0
+!i10b 1
+!s85 0
+vtestbench
+IHP>h]o3hEAB@bB[IN1TPC0
+VTLDNDYUHnD0fl7iL[6fGG0
+R1
+w1366404658
+8../../src/testbench.v
+F../../src/testbench.v
+L0 3
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+!s100 XAMa6mIO_>7kNg0calJWb0
+!i10b 1
+!s85 0
+vv_rams_11
+I9B3K@[3:`jK^P8l>W6<^H3
+V?K@71a[j8z<`SgFa=W3K81
+R1
+w1366348156
+8../../src/DPRAM.v
+F../../src/DPRAM.v
+L0 4
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+!s100 27Un>hm]CdOAlNCBJ2cEM0
+!i10b 1
+!s85 0
+vv_rams_11_1024
+Id<aAMX=i6`o5;PTRBbId@0
+VU@<^<H[YEJ991MBdDL<__3
+R1
+w1366403507
+8../../src/DPRAM1024.v
+F../../src/DPRAM1024.v
+L0 4
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+!s100 3dNbB^a<1QdGCWl7zKSi31
+!i10b 1
+!s85 0
+vWaveGen
+InoXc>01mEkze9b>lA@[Fd1
+VYl<P5_kzS]J9Q8;F4K6303
+R1
+w1366432639
+8../../src/WaveGen.v
+F../../src/WaveGen.v
+L0 1
+R2
+r1
+31
+R3
+R4
+R5
+R6
+R7
+R8
+n@wave@gen
+!i10b 1
+!s100 VEZCBX`nkH@m;=OnGhLf;3
+!s85 0

@@ -1,0 +1,31 @@
+Release 14.1 - netgen P.15xf (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -ofmt verilog -sim -tm fifo_generator_v9_1_exdes -pcf
+mapped.pcf -w -sdf_anno false routed.ncd routed.v  
+
+Read and Annotate design 'routed.ncd' ...
+Loading device for application Rf_Device from file '5vlx110t.nph' in environment
+/opt/Xilinx/14.1/ISE_DS/ISE/.
+   "fifo_generator_v9_1_exdes" is an NCD, version 3.2, device xc5vlx110t,
+package ff1136, speed -1
+Loading constraints from 'mapped.pcf'...
+The number of routable networks is 128
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog SDF file 'routed.sdf' ...
+Writing Verilog netlist file 'routed.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx SIMPRIM
+   simulation primitives and has to be used with SIMPRIM simulation library for
+   correct compilation and simulation. 
+INFO:NetListWriters - Xilinx recommends running separate simulations to check
+   for setup by specifying the MAX field in the SDF file and for hold by
+   specifying the MIN field in the SDF file. Please refer to Simulator
+   documentation for more details on specifying MIN and MAX field in the SDF.
+INFO:NetListWriters:665 - For more information on how to pass the SDF switches
+   to the simulator, see your Simulator tool documentation.
+Number of warnings: 0
+Number of info messages: 3
+Total memory usage is 655852 kilobytes

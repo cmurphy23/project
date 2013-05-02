@@ -1,0 +1,39 @@
+module ml505top (
+		 input  [5:0] GPIO_DIP,
+		 input        GPIO_COMPSW_C,
+		 input        CLK_33MHZ_FPGA,
+		 input AUDIO_SDATA_IN,
+		 input AUDIO_BIT_CLK,
+
+		 output AUDIO_SDATA_OUT,
+		 output AUDIO_SYNC,
+		 output FLASH_AUDIO_RESET_B,
+		 output [7:0] GPIO_LED,
+		 output       GPIO_COMPLED_C
+		 
+);
+
+    // Clock and reset:
+    wire clk;
+	BUFG clock_buf(.I(CLK_33MHZ_FPGA), .O(clk));
+
+    // Use the center compass switch to reset/trigger chipscope:
+    wire rst;
+    Debouncer rst_parse(
+        .clk(clk),
+        .in(GPIO_COMPSW_C),
+        .out(rst));
+
+
+   Example codec_com(.clock(clk),
+		     .audio_reset_b(FLASH_AUDIO_RESET_B),
+		     .ac97_sdata_out(AUDIO_SDATA_OUT),
+		     .ac97_sdata_in(AUDIO_SDATA_IN),
+		     .ac97_synch(AUDIO_SYNC),
+		     .ac97_bit_clock(AUDIO_BIT_CLK));
+   
+    
+
+  
+
+endmodule

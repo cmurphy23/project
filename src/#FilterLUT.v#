@@ -1,0 +1,6 @@
+module FilterLUT(delay,constant);
+   input [9:0] delay;
+   output [10:0] constant;
+
+
+   

@@ -1,0 +1,272 @@
+module MIDIDecodeControl(
+			 input Clock,
+			 input Reset,
+			 input FIFOFull,
+			 input FIFOEmpty,
+			 input DataValid,
+			 input messageValid,
+			 output read,
+			 output[1:0] decodeType,
+			 output firstByte,
+			 output secondByte,
+			 output thirdByte,
+			 output waveReady
+			 );
+
+   localparam INITIAL = 5'b00000;
+   localparam FIRSTBYTE = 5'b00001;
+   localparam SECONDBYTE = 5'b00010;
+   localparam THIRDBYTE = 5'b00100;
+   //localparam FULL = 5'b01000;
+   localparam INVALID = 5'b10000;
+   
+
+   reg [4:0] 			cs;
+   reg [4:0] 			ns;
+   reg 				read_en;
+   reg [1:0] 			decode;
+   reg 				fb;
+   reg 				sb;
+   reg 				tb;
+   reg 				startGen;
+   reg 				sendWave;
+   
+   
+ 
+   assign read = read_en;
+   assign decodeType = decode;
+   assign firstByte = fb;
+   assign secondByte = sb;
+   assign thirdByte = tb;
+   assign waveReady = sendWave;
+   
+
+   /*
+   always@(posedge Clock) begin
+      
+      if (Reset) begin
+	 cs <= INITIAL;
+   
+      else
+	cs <= ns;
+       
+      
+   end
+   */
+   always@(posedge Clock) begin
+      if (Reset) begin
+	 cs <= INITIAL;
+         sendWave <= 0;
+      end
+      else begin
+	 cs <= ns;
+	 sendWave <= startGen;
+      end
+      
+   end
+   
+
+   always@(*) begin
+      case(cs)
+	INITIAL: begin
+	   //if (tb && !startGen) startGen = 1;
+	   //else startGen = 0;
+	   decode = 2'b11;
+	   //read_en = 1'b0;
+	   startGen = 0;
+	   fb = 0;
+	   sb = 0;
+	   tb = 0;
+	   if (!read_en) begin
+	      read_en = 1;
+	      ns = FIRSTBYTE;
+	   end
+	   else begin
+	      if (FIFOEmpty || !DataValid)
+		ns = INITIAL;
+              else if (!messageValid)
+		ns = INVALID;
+           end
+	end
+	FIRSTBYTE: begin
+	   //if (tb && !startGen) startGen = 1;
+	   //else startGen = 0;
+	   startGen = 0;
+	   tb = 0;
+	   fb = 0;
+	   sb = 0;
+	   decode = 2'b00;
+	   if (!DataValid || FIFOEmpty) ns = FIRSTBYTE;
+	   else begin
+	      if (messageValid) begin
+		 fb = 1;
+		 
+		 ns = SECONDBYTE;
+		 
+	      end
+	      else ns = INVALID;
+	      
+	   end
+	   
+	end
+	SECONDBYTE: begin
+	   decode = 2'b01;
+	   fb = 0;
+	   sb = 0;
+	   tb = 0;
+	   if (!DataValid || FIFOEmpty) ns = SECONDBYTE;
+	   else begin
+	      if (messageValid) begin
+		 sb = 1;
+		 
+		 ns = THIRDBYTE;
+	      end
+	      else ns = INVALID;
+	   end
+   
+	end
+	THIRDBYTE: begin
+	   decode = 2'b10;
+	   tb = 0;
+	   sb = 0;
+	   fb = 0;
+	   if ((!DataValid || FIFOEmpty) && !messageValid) ns = THIRDBYTE;
+           else begin
+	      if (messageValid) begin
+		 tb = 1;
+		 startGen = 1;
+		 ns = FIRSTBYTE;
+	      end
+	      else ns = INVALID;
+	      
+	   end
+   
+	end
+	/*
+	FULL: begin
+	   decode = 2'b11;
+	   sb = 0;
+	   tb = 0;
+	   read_en = 0;
+	   startGen = 1;
+	   if (FIFOEmpty)ns = INITIAL;
+           else begin
+	      read_en = 1;
+	      ns = FIRSTBYTE;
+	      
+	   end
+ 
+	end
+	*/
+	INVALID: begin
+	   decode = 2'b00;
+	   fb = 0;
+	   sb = 0;
+	   tb = 0;
+	   if (FIFOEmpty || !DataValid) ns = INITIAL;
+           else begin
+	      if (messageValid) begin
+		 fb = 1;
+		 ns = SECONDBYTE;
+		 
+	      end
+	      else ns = INVALID;
+	      
+	   end
+ 
+	end
+
+        default: ns = INITIAL;
+   
+      endcase // case (cs)
+   end // always@ (*)
+
+
+   always@(*) begin
+      if (Reset) begin
+	 mType = 0;
+	 freq = 0;
+	 veloc = 0;
+	 //messageReg = 0;
+	 valid = 0;
+      end
+      
+      valid = 1;
+      case(decodeType)
+	`MIDI_EVENT: begin
+	   case(messageReg[7:4])
+	     `MIDI_NOTE_OFF: mType = 0;
+	     `MIDI_NOTE_ON: mType = 1;
+	     default: valid = 0;
+	   endcase // case (messageReg[7:4])
+	end
+	`MIDI_FREQ: begin
+	   case(messageReg)
+	     8'b0010_1000: freq = 583;
+	     8'b0010_1001: freq = 550;
+	     8'b0010_1010: freq = 519;
+	     8'b0010_1011: freq = 490;
+	     8'b0010_1100: freq = 462;
+	     8'b0010_1101: freq = 436;
+	     8'b0010_1110: freq = 412;
+	     8'b0010_1111: freq = 389;
+	     8'b0011_0000: freq = 367;
+	     8'b0011_0001: freq = 346;
+	     8'b0011_0010: freq = 327;
+	     8'b0011_0011: freq = 309;
+	     8'b0011_0100: freq = 291;
+	     8'b0011_0101: freq = 275;
+	     8'b0011_0110: freq = 259;
+	     8'b0011_0111: freq = 245;
+	     8'b0011_1000: freq = 231;
+	     8'b0011_1001: freq = 218;
+	     8'b0011_1010: freq = 206;
+	     8'b0011_1011: freq = 194;
+	     8'b0011_1100: freq = 183;
+	     8'b0011_1101: freq = 173;
+	     8'b0011_1110: freq = 163;
+	     8'b0011_1111: freq = 154;
+	     8'b0100_0000: freq = 146;
+	     8'b0100_0001: freq = 137;
+	     8'b0100_0010: freq = 130;
+	     8'b0100_0011: freq = 122;
+	     8'b0100_0100: freq = 116;
+	     8'b0100_0101: freq = 109;
+	     8'b0100_0110: freq = 103;
+	     8'b0100_0111: freq = 97;
+	     8'b0100_1000: freq = 92;
+	     8'b0100_1001: freq = 87;
+	     8'b0100_1010: freq = 82;
+	     8'b0100_1011: freq = 77;
+	     8'b0100_1100: freq = 73;
+	     8'b0100_1101: freq = 69;
+	     8'b0100_1110: freq = 65;
+	     8'b0100_1111: freq = 61;
+	     8'b0101_0000: freq = 58;
+	     8'b0101_0001: freq = 55;
+	     8'b0101_0010: freq = 51;
+	     8'b0101_0011: freq = 49;
+	     8'b0101_0100: freq = 46;
+	     8'b0101_0101: freq = 43;
+	     8'b0101_0110: freq = 41;
+	     default: valid = 0;
+
+	   endcase // case (messageReg)
+	end // case: `MIDI_FREQ
+	`MIDI_VEL: begin
+	   if (messageReg[7] == 0)
+	     veloc = messageReg;
+	   else
+	     valid = 0;
+	end
+	default: valid = 0;
+
+      endcase // case (decodeType)
+   end // always@ (*)
+   
+	   
+
+
+
+
+   endmodule

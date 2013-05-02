@@ -1,0 +1,12 @@
+module GainLUT (delay, filterMul);
+   input [9:0] delay;
+   output [10:0] filterMul;
+
+
+
+   always @(*)
+     if (delay <= 51)
+       filterMul <= 11'b01111111110;
+     else if (delay <= 80)
+       filterMul <= 11'b01111111101;
+       
