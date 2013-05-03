@@ -1,4 +1,4 @@
-module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,gain);
+module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,gain,source);
    input clk;
    input received;
    output ready;
@@ -10,6 +10,8 @@ module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,g
    output      prepped;
    input       go;
    input [10:0] gain;
+   input 	source;
+   
    
    
    
@@ -36,7 +38,7 @@ module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,g
    wire [28:0] 	      newData;
    wire [20:0] 	      shiftedData;
    reg [10:0] 	      constant;
-   reg [5:0] 	      constant2 = 6'b011101;
+   reg [5:0] 	      constant2 = 6'b011110;
    wire [16:0] 	      newConst;
    wire [10:0] 	      filterMul;
    reg 		      init = 1;
@@ -44,8 +46,10 @@ module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,g
    reg 		      prepped;
    reg [5:0] 	      count2 = 0;
    reg [7:0] 	      volume = 8'b01111111;
+   wire [7:0] 	      volumeIn; 	      
    wire [17:0] 	      dataOutInt1;
    wire [25:0] 	      dataOutInt2;
+   
    
    
    
@@ -93,7 +97,9 @@ module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,g
 
    assign active = going;
 
-   assign dataOutInt2 = $signed(dataOutInt1) * $signed(velocity);
+   assign dataOutInt2 = $signed(dataOutInt1) * $signed(volumeIn);
+
+   assign volumeIn = (8'b10000000-(((8'b10000000-velocity)>>2)-8'b00000001));
 
    assign dataOut = dataOutInt2[24:7];
    
@@ -145,138 +151,273 @@ module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,g
 	    else begin
 	       WrEn <= 1;
 	       ready <= 0;
-	       
-	       case(writeAddress[5:0])
-		 
-		 6'b000000: dataIn <= $signed(10'b0000000000)*$signed(volume);
-		 
-		 6'b000001: dataIn <= $signed(10'b0000110010)*$signed(volume);
-		 
-		 6'b000010: dataIn <= $signed(10'b0001100011)*$signed(volume);
-		 
-		 6'b000011: dataIn <= $signed(10'b0010010100)*$signed(volume);
-		 
-		 6'b000100: dataIn <= $signed(10'b0011000011)*$signed(volume);
-		 
-		 6'b000101: dataIn <= $signed(10'b0011110001)*$signed(volume);
-		 
-		 6'b000110: dataIn <= $signed(10'b0100011100)*$signed(volume);
-		 
-		 6'b000111: dataIn <= $signed(10'b0101000100)*$signed(volume);
-		 
-		 6'b001000: dataIn <= $signed(10'b0101101010)*$signed(volume);
-		 
-		 6'b001001: dataIn <= $signed(10'b0110001011)*$signed(volume);
-		 
-		 6'b001010: dataIn <= $signed(10'b0110101001)*$signed(volume);
-		 
-		 6'b001011: dataIn <= $signed(10'b0111000011)*$signed(volume);
-		 
-		 6'b001100: dataIn <= $signed(10'b0111011001)*$signed(volume);
-		 
-		 6'b001101: dataIn <= $signed(10'b0111101001)*$signed(volume);
-		 
-		 6'b001110: dataIn <= $signed(10'b0111111011)*$signed(volume);
-		 
-		 6'b001111: dataIn <= $signed(10'b0111111101)*$signed(volume);
-		 
-		 6'b010000: dataIn <= $signed(10'b0111111111)*$signed(volume);
-		 
-		 6'b010001: dataIn <= $signed(10'b0111111101)*$signed(volume);
 
-		 6'b010010: dataIn <= $signed(10'b0111111011)*$signed(volume);
+	       if (!source) begin
+		  case(writeAddress[5:0])
+		    
+		    6'b000000: dataIn <= $signed(10'b0000000000)*$signed(volume);
+		    
+		    6'b000001: dataIn <= $signed(10'b0000110010)*$signed(volume);
+		    
+		    6'b000010: dataIn <= $signed(10'b0001100011)*$signed(volume);
+		    
+		    6'b000011: dataIn <= $signed(10'b0010010100)*$signed(volume);
+		    
+		    6'b000100: dataIn <= $signed(10'b0011000011)*$signed(volume);
+		    
+		    6'b000101: dataIn <= $signed(10'b0011110001)*$signed(volume);
+		    
+		    6'b000110: dataIn <= $signed(10'b0100011100)*$signed(volume);
+		    
+		    6'b000111: dataIn <= $signed(10'b0101000100)*$signed(volume);
+		    
+		    6'b001000: dataIn <= $signed(10'b0101101010)*$signed(volume);
+		    
+		    6'b001001: dataIn <= $signed(10'b0110001011)*$signed(volume);
+		    
+		    6'b001010: dataIn <= $signed(10'b0110101001)*$signed(volume);
+		    
+		    6'b001011: dataIn <= $signed(10'b0111000011)*$signed(volume);
+		    
+		    6'b001100: dataIn <= $signed(10'b0111011001)*$signed(volume);
+		    
+		    6'b001101: dataIn <= $signed(10'b0111101001)*$signed(volume);
+		    
+		    6'b001110: dataIn <= $signed(10'b0111111011)*$signed(volume);
+		    
+		    6'b001111: dataIn <= $signed(10'b0111111101)*$signed(volume);
+		    
+		    6'b010000: dataIn <= $signed(10'b0111111111)*$signed(volume);
+		    
+		    6'b010001: dataIn <= $signed(10'b0111111101)*$signed(volume);
 
-		 6'b010011: dataIn <= $signed(10'b0111101001)*$signed(volume);
+		    6'b010010: dataIn <= $signed(10'b0111111011)*$signed(volume);
 
-		 6'b010100: dataIn <= $signed(10'b0111011001)*$signed(volume);
+		    6'b010011: dataIn <= $signed(10'b0111101001)*$signed(volume);
 
-		 6'b010101: dataIn <= $signed(10'b0111000011)*$signed(volume);
+		    6'b010100: dataIn <= $signed(10'b0111011001)*$signed(volume);
 
-		 6'b010110: dataIn <= $signed(10'b0110101001)*$signed(volume);
+		    6'b010101: dataIn <= $signed(10'b0111000011)*$signed(volume);
 
-		 6'b010111: dataIn <= $signed(10'b0110001011)*$signed(volume);
+		    6'b010110: dataIn <= $signed(10'b0110101001)*$signed(volume);
 
-		 6'b011000: dataIn <= $signed(10'b0101101010)*$signed(volume);
+		    6'b010111: dataIn <= $signed(10'b0110001011)*$signed(volume);
 
-		 6'b011001: dataIn <= $signed(10'b0101000100)*$signed(volume);
+		    6'b011000: dataIn <= $signed(10'b0101101010)*$signed(volume);
 
-		 6'b011010: dataIn <= $signed(10'b0100011100)*$signed(volume);
+		    6'b011001: dataIn <= $signed(10'b0101000100)*$signed(volume);
 
-		 6'b011011: dataIn <= $signed(10'b0011110001)*$signed(volume);
+		    6'b011010: dataIn <= $signed(10'b0100011100)*$signed(volume);
 
-		 6'b011100: dataIn <= $signed(10'b0011000011)*$signed(volume);
+		    6'b011011: dataIn <= $signed(10'b0011110001)*$signed(volume);
 
-		 6'b011101: dataIn <= $signed(10'b0010010100)*$signed(volume);
-	      
-		 6'b011110: dataIn <= $signed(10'b0001100011)*$signed(volume);
+		    6'b011100: dataIn <= $signed(10'b0011000011)*$signed(volume);
 
-		 6'b011111: dataIn <= $signed(10'b0000110010)*$signed(volume);
-	       
-		 6'b100000: dataIn <= $signed(10'b0000000000)*$signed(volume);
+		    6'b011101: dataIn <= $signed(10'b0010010100)*$signed(volume);
+		    
+		    6'b011110: dataIn <= $signed(10'b0001100011)*$signed(volume);
 
-		 6'b100001: dataIn <= $signed(10'b1111001101)*$signed(volume);
+		    6'b011111: dataIn <= $signed(10'b0000110010)*$signed(volume);
+		    
+		    6'b100000: dataIn <= $signed(10'b0000000000)*$signed(volume);
 
-		 6'b100010: dataIn <= $signed(10'b1110011100)*$signed(volume);
+		    6'b100001: dataIn <= $signed(10'b1111001101)*$signed(volume);
 
-		 6'b100011: dataIn <= $signed(10'b1101101011)*$signed(volume);
+		    6'b100010: dataIn <= $signed(10'b1110011100)*$signed(volume);
 
-		 6'b100100: dataIn <= $signed(10'b1100111100)*$signed(volume);
+		    6'b100011: dataIn <= $signed(10'b1101101011)*$signed(volume);
 
-		 6'b100101: dataIn <= $signed(10'b1100001110)*$signed(volume);
+		    6'b100100: dataIn <= $signed(10'b1100111100)*$signed(volume);
 
-		 6'b100110: dataIn <= $signed(10'b1011100011)*$signed(volume);
+		    6'b100101: dataIn <= $signed(10'b1100001110)*$signed(volume);
 
-		 6'b100111: dataIn <= $signed(10'b1010111011)*$signed(volume);
+		    6'b100110: dataIn <= $signed(10'b1011100011)*$signed(volume);
 
-		 6'b101000: dataIn <= $signed(10'b1010010101)*$signed(volume);
-	       
-		 6'b101001: dataIn <= $signed(10'b1001110100)*$signed(volume);
+		    6'b100111: dataIn <= $signed(10'b1010111011)*$signed(volume);
 
-		 6'b101010: dataIn <= $signed(10'b1001010110)*$signed(volume);
+		    6'b101000: dataIn <= $signed(10'b1010010101)*$signed(volume);
+		    
+		    6'b101001: dataIn <= $signed(10'b1001110100)*$signed(volume);
 
-		 6'b101011: dataIn <= $signed(10'b1000111100)*$signed(volume);
+		    6'b101010: dataIn <= $signed(10'b1001010110)*$signed(volume);
 
-		 6'b101100: dataIn <= $signed(10'b1000100110)*$signed(volume);
+		    6'b101011: dataIn <= $signed(10'b1000111100)*$signed(volume);
 
-		 6'b101101: dataIn <= $signed(10'b1000010110)*$signed(volume);
-	       
-		 6'b101110: dataIn <= $signed(10'b1000001001)*$signed(volume);
-	       
-		 6'b101111: dataIn <= $signed(10'b1000000010)*$signed(volume);
+		    6'b101100: dataIn <= $signed(10'b1000100110)*$signed(volume);
 
-		 6'b110000: dataIn <= $signed(10'b1000000000)*$signed(volume);
+		    6'b101101: dataIn <= $signed(10'b1000010110)*$signed(volume);
+		    
+		    6'b101110: dataIn <= $signed(10'b1000001001)*$signed(volume);
+		    
+		    6'b101111: dataIn <= $signed(10'b1000000010)*$signed(volume);
 
-		 6'b110001: dataIn <= $signed(10'b1000000010)*$signed(volume);
+		    6'b110000: dataIn <= $signed(10'b1000000000)*$signed(volume);
 
-		 6'b110010: dataIn <= $signed(10'b1000001001)*$signed(volume);
+		    6'b110001: dataIn <= $signed(10'b1000000010)*$signed(volume);
 
-		 6'b110011: dataIn <= $signed(10'b1000010110)*$signed(volume);
+		    6'b110010: dataIn <= $signed(10'b1000001001)*$signed(volume);
 
-		 6'b110100: dataIn <= $signed(10'b1000100110)*$signed(volume);
+		    6'b110011: dataIn <= $signed(10'b1000010110)*$signed(volume);
 
-		 6'b110101: dataIn <= $signed(10'b1000111100)*$signed(volume);
+		    6'b110100: dataIn <= $signed(10'b1000100110)*$signed(volume);
 
-		 6'b110110: dataIn <= $signed(10'b1001010110)*$signed(volume);
+		    6'b110101: dataIn <= $signed(10'b1000111100)*$signed(volume);
 
-		 6'b110111: dataIn <= $signed(10'b1001110100)*$signed(volume);
+		    6'b110110: dataIn <= $signed(10'b1001010110)*$signed(volume);
 
-		 6'b111000: dataIn <= $signed(10'b1010010101)*$signed(volume);
-	       
-		 6'b111001: dataIn <= $signed(10'b1010111011)*$signed(volume);
+		    6'b110111: dataIn <= $signed(10'b1001110100)*$signed(volume);
 
-		 6'b111010: dataIn <= $signed(10'b1011100011)*$signed(volume);
+		    6'b111000: dataIn <= $signed(10'b1010010101)*$signed(volume);
+		    
+		    6'b111001: dataIn <= $signed(10'b1010111011)*$signed(volume);
 
-		 6'b111011: dataIn <= $signed(10'b1100001110)*$signed(volume);
+		    6'b111010: dataIn <= $signed(10'b1011100011)*$signed(volume);
 
-		 6'b111100: dataIn <= $signed(10'b1100111100)*$signed(volume);
+		    6'b111011: dataIn <= $signed(10'b1100001110)*$signed(volume);
 
-		 6'b111101: dataIn <= $signed(10'b1101101011)*$signed(volume);
+		    6'b111100: dataIn <= $signed(10'b1100111100)*$signed(volume);
 
-		 6'b111110: dataIn <= $signed(10'b1110011100)*$signed(volume);
+		    6'b111101: dataIn <= $signed(10'b1101101011)*$signed(volume);
 
-		 6'b111111: dataIn <= $signed(10'b1111001101)*$signed(volume);
+		    6'b111110: dataIn <= $signed(10'b1110011100)*$signed(volume);
 
-	       endcase
+		    6'b111111: dataIn <= $signed(10'b1111001101)*$signed(volume);
+
+		  endcase // case (writeAddress[5:0])
+	       end // if (!source)
+	       else if (source) begin
+		   case(writeAddress[5:0])
+		    
+		    6'b000000: dataIn <= $signed(10'b1011111110)*$signed(volume);
+		    
+		    6'b000001: dataIn <= $signed(10'b1001000101)*$signed(volume);
+		    
+		    6'b000010: dataIn <= $signed(10'b1001000001)*$signed(volume);
+		    
+		    6'b000011: dataIn <= $signed(10'b1000101100)*$signed(volume);
+		    
+		    6'b000100: dataIn <= $signed(10'b0110110101)*$signed(volume);
+		    
+		    6'b000101: dataIn <= $signed(10'b0011110001)*$signed(volume);
+		    
+		    6'b000110: dataIn <= $signed(10'b0000001110)*$signed(volume);
+		    
+		    6'b000111: dataIn <= $signed(10'b0110010101)*$signed(volume);
+		    
+		    6'b001000: dataIn <= $signed(10'b0011101101)*$signed(volume);
+		    
+		    6'b001001: dataIn <= $signed(10'b1100111100)*$signed(volume);
+		    
+		    6'b001010: dataIn <= $signed(10'b0111111110)*$signed(volume);
+		    
+		    6'b001011: dataIn <= $signed(10'b1111110000)*$signed(volume);
+		    
+		    6'b001100: dataIn <= $signed(10'b1111000001)*$signed(volume);
+		    
+		    6'b001101: dataIn <= $signed(10'b0011001100)*$signed(volume);
+		    
+		    6'b001110: dataIn <= $signed(10'b1001100101)*$signed(volume);
+		    
+		    6'b001111: dataIn <= $signed(10'b0100001100)*$signed(volume);
+		    
+		    6'b010000: dataIn <= $signed(10'b1001110101)*$signed(volume);
+		    
+		    6'b010001: dataIn <= $signed(10'b1000000001)*$signed(volume);
+
+		    6'b010010: dataIn <= $signed(10'b0100101001)*$signed(volume);
+
+		    6'b010011: dataIn <= $signed(10'b0110110010)*$signed(volume);
+
+		    6'b010100: dataIn <= $signed(10'b0001101101)*$signed(volume);
+
+		    6'b010101: dataIn <= $signed(10'b0100010010)*$signed(volume);
+
+		    6'b010110: dataIn <= $signed(10'b1000011011)*$signed(volume);
+
+		    6'b010111: dataIn <= $signed(10'b0001000111)*$signed(volume);
+
+		    6'b011000: dataIn <= $signed(10'b0000001101)*$signed(volume);
+
+		    6'b011001: dataIn <= $signed(10'b0101100101)*$signed(volume);
+
+		    6'b011010: dataIn <= $signed(10'b0110011110)*$signed(volume);
+
+		    6'b011011: dataIn <= $signed(10'b0100001001)*$signed(volume);
+
+		    6'b011100: dataIn <= $signed(10'b1001011111)*$signed(volume);
+
+		    6'b011101: dataIn <= $signed(10'b1011001001)*$signed(volume);
+		    
+		    6'b011110: dataIn <= $signed(10'b0100000001)*$signed(volume);
+
+		    6'b011111: dataIn <= $signed(10'b1000110001)*$signed(volume);
+		    
+		    6'b100000: dataIn <= $signed(10'b1000110111)*$signed(volume);
+
+		    6'b100001: dataIn <= $signed(10'b0101100110)*$signed(volume);
+
+		    6'b100010: dataIn <= $signed(10'b0001000101)*$signed(volume);
+
+		    6'b100011: dataIn <= $signed(10'b0100011111)*$signed(volume);
+
+		    6'b100100: dataIn <= $signed(10'b1100111001)*$signed(volume);
+
+		    6'b100101: dataIn <= $signed(10'b1011111111)*$signed(volume);
+
+		    6'b100110: dataIn <= $signed(10'b1000000001)*$signed(volume);
+
+		    6'b100111: dataIn <= $signed(10'b1011101000)*$signed(volume);
+
+		    6'b101000: dataIn <= $signed(10'b0010101001)*$signed(volume);
+		    
+		    6'b101001: dataIn <= $signed(10'b0100110011)*$signed(volume);
+
+		    6'b101010: dataIn <= $signed(10'b1000100010)*$signed(volume);
+
+		    6'b101011: dataIn <= $signed(10'b0001101000)*$signed(volume);
+
+		    6'b101100: dataIn <= $signed(10'b1010110001)*$signed(volume);
+
+		    6'b101101: dataIn <= $signed(10'b0011011101)*$signed(volume);
+		    
+		    6'b101110: dataIn <= $signed(10'b0001110101)*$signed(volume);
+		    
+		    6'b101111: dataIn <= $signed(10'b0011011101)*$signed(volume);
+
+		    6'b110000: dataIn <= $signed(10'b1111000100)*$signed(volume);
+
+		    6'b110001: dataIn <= $signed(10'b1000010000)*$signed(volume);
+
+		    6'b110010: dataIn <= $signed(10'b0101010111)*$signed(volume);
+
+		    6'b110011: dataIn <= $signed(10'b1100001101)*$signed(volume);
+
+		    6'b110100: dataIn <= $signed(10'b1001110001)*$signed(volume);
+
+		    6'b110101: dataIn <= $signed(10'b1101100110)*$signed(volume);
+
+		    6'b110110: dataIn <= $signed(10'b1100001010)*$signed(volume);
+
+		    6'b110111: dataIn <= $signed(10'b0110000100)*$signed(volume);
+
+		    6'b111000: dataIn <= $signed(10'b0100000101)*$signed(volume);
+		    
+		    6'b111001: dataIn <= $signed(10'b1100001001)*$signed(volume);
+
+		    6'b111010: dataIn <= $signed(10'b1000001111)*$signed(volume);
+
+		    6'b111011: dataIn <= $signed(10'b0111001111)*$signed(volume);
+
+		    6'b111100: dataIn <= $signed(10'b0100101010)*$signed(volume);
+
+		    6'b111101: dataIn <= $signed(10'b1010110101)*$signed(volume);
+
+		    6'b111110: dataIn <= $signed(10'b0011100110)*$signed(volume);
+
+		    6'b111111: dataIn <= $signed(10'b0101101101)*$signed(volume);
+
+		  endcase // case (writeAddress[5:0])
+	       end
 
 	       
 	       /*if (writeAddress[5:0]>31) begin
@@ -305,7 +446,7 @@ module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,g
 	    if (count == 1023) begin
 	       constant <= newConst[16:6];
 	       count <= 0;
-	       if (count2 > 36) begin
+	       if (count2 > 50) begin
 		  resetting <= 1;
 		  going <= 0;
 		  writeAddress <= 1023;
@@ -322,7 +463,7 @@ module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,g
 	    WrEn <= 1;
 	    dataIn <= shiftedData;
 	    if (shiftedData[17]) begin
-	       if (shiftedData[16:13] == 4'b1111) begin
+	       if (shiftedData[16:11] == 6'b111111) begin
 		  if (count != 1023) begin 
 		     count <= count + 1;
 		  end
@@ -332,7 +473,7 @@ module WaveGen(clk,ready,received,dataOut,full,delay,reset,velocity,prepped,go,g
 	       end
 	    end
 	    else if (!shiftedData[17]) begin
-	       if (shiftedData[16:13] == 4'b0000) begin
+	       if (shiftedData[16:11] == 6'b000000) begin
 		  if (count != 1023) begin 
 		     count <= count + 1;
 		  end

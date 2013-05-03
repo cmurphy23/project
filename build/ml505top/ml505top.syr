@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> 
 
@@ -120,8 +120,10 @@ Module <chipscope_icon> compiled
 Compiling verilog file "../../src/Const.v" in library work
 Compiling verilog file "../../src/Debouncer.v" in library work
 Module <chipscope_ila> compiled
-Compiling verilog file "../../src/DPRAM1024.v" in library work
+Compiling verilog file "../../src/Decoder.v" in library work
 Module <Debouncer> compiled
+Compiling verilog file "../../src/DPRAM1024.v" in library work
+Module <Decoder> compiled
 Compiling verilog file "../../src/DPRAM.v" in library work
 Module <v_rams_11_1024> compiled
 Compiling verilog file "../../src/EchoTestbench.v" in library work
@@ -136,8 +138,10 @@ Compiling verilog file "../../src/fifo_generator_v9_1.v" in library work
 Module <FIFODatapath> compiled
 Compiling verilog file "../../src/FPGA_TOP_ML505.v" in library work
 Module <fifo_generator_v9_1> compiled
-Compiling verilog file "../../src/GainLUT.v" in library work
+Compiling verilog file "../../src/FreqLUT.v" in library work
 Module <ml505top> compiled
+Compiling verilog file "../../src/GainLUT.v" in library work
+Module <FreqLUT> compiled
 Compiling verilog file "../../src/IORegister.v" in library work
 Module <GainLUT> compiled
 Compiling verilog file "../../src/MIDIDecodeControl.v" in library work
@@ -198,14 +202,7 @@ Analyzing hierarchy for module <UART> in library <work> with parameters.
 	BaudRate = "00000000000000010111000010000100"
 	ClockFreq = "00000101111101011110000100000000"
 
-Analyzing hierarchy for module <MIDIDecodeDataPath> in library <work>.
-
-Analyzing hierarchy for module <MIDIDecodeControl> in library <work> with parameters.
-	FIRSTBYTE = "00001"
-	INITIAL = "00000"
-	INVALID = "10000"
-	SECONDBYTE = "00010"
-	THIRDBYTE = "00100"
+Analyzing hierarchy for module <Decoder> in library <work>.
 
 Analyzing hierarchy for module <v_rams_11> in library <work>.
 
@@ -234,8 +231,6 @@ Analyzing hierarchy for module <UAReceive> in library <work> with parameters.
 	SampleTime = "00000000000000000000001000010001"
 	SymbolEdgeTime = "00000000000000000000010000100011"
 
-Analyzing hierarchy for module <MIDIDec> in library <work>.
-
 Analyzing hierarchy for module <v_rams_11_1024> in library <work>.
 
 
@@ -247,9 +242,9 @@ WARNING:Xst:863 - "../../src/FPGA_TOP_ML505.v" line 98: Name conflict (<dataOut>
 WARNING:Xst:863 - "../../src/FPGA_TOP_ML505.v" line 95: Name conflict (<dataIn> and <DataIn>, renaming dataIn as datain_rnm0).
 	ClockFreq = 32'sb00000101111101011110000100000000
 	UARTBaudRate = 32'sb00000000000000010111000010000100
-WARNING:Xst:2211 - "../../src/chipscope_icon.v" line 181: Instantiating black box module <chipscope_icon>.
-WARNING:Xst:2211 - "../../src/chipscope_ila.v" line 188: Instantiating black box module <chipscope_ila>.
-WARNING:Xst:2211 - "../../src/fifo_generator_v9_1.v" line 251: Instantiating black box module <fifo_generator_v9_1>.
+WARNING:Xst:2211 - "../../src/chipscope_icon.v" line 168: Instantiating black box module <chipscope_icon>.
+WARNING:Xst:2211 - "../../src/chipscope_ila.v" line 175: Instantiating black box module <chipscope_ila>.
+WARNING:Xst:2211 - "../../src/fifo_generator_v9_1.v" line 239: Instantiating black box module <fifo_generator_v9_1>.
 Module <ml505top> is correct for synthesis.
  
 Analyzing module <Debouncer> in library <work>.
@@ -273,29 +268,29 @@ Module <Example> is correct for synthesis.
     Set user-defined property "INIT =  0" for signal <frame_count> in unit <Example>.
     Set user-defined property "INIT =  00" for signal <reset_count>.
 Analyzing module <AudioBuffer> in library <work>.
-WARNING:Xst:2320 - "../../src/AudioBuffer.v" line 46: Value for signal writeData in initial block is not constant. The initialization will be ignored.
+WARNING:Xst:2320 - "../../src/AudioBuffer.v" line 54: Value for signal writeData in initial block is not constant. The initialization will be ignored.
 Module <AudioBuffer> is correct for synthesis.
  
 Analyzing module <v_rams_11> in library <work>.
 Module <v_rams_11> is correct for synthesis.
  
 Analyzing module <WaveGenController> in library <work>.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 88: Unconnected input port 'full' of instance 'gen1' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 88: Unconnected input port 'reset' of instance 'gen1' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 90: Unconnected input port 'full' of instance 'gen2' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 90: Unconnected input port 'reset' of instance 'gen2' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 92: Unconnected input port 'full' of instance 'gen3' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 92: Unconnected input port 'reset' of instance 'gen3' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 94: Unconnected input port 'full' of instance 'gen4' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 94: Unconnected input port 'reset' of instance 'gen4' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 96: Unconnected input port 'full' of instance 'gen5' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 96: Unconnected input port 'reset' of instance 'gen5' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 98: Unconnected input port 'full' of instance 'gen6' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 98: Unconnected input port 'reset' of instance 'gen6' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 100: Unconnected input port 'full' of instance 'gen7' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 100: Unconnected input port 'reset' of instance 'gen7' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 102: Unconnected input port 'full' of instance 'gen8' is tied to GND.
-WARNING:Xst:852 - "../../src/WaveGenController.v" line 102: Unconnected input port 'reset' of instance 'gen8' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 90: Unconnected input port 'full' of instance 'gen1' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 90: Unconnected input port 'reset' of instance 'gen1' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 92: Unconnected input port 'full' of instance 'gen2' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 92: Unconnected input port 'reset' of instance 'gen2' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 94: Unconnected input port 'full' of instance 'gen3' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 94: Unconnected input port 'reset' of instance 'gen3' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 96: Unconnected input port 'full' of instance 'gen4' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 96: Unconnected input port 'reset' of instance 'gen4' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 98: Unconnected input port 'full' of instance 'gen5' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 98: Unconnected input port 'reset' of instance 'gen5' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 100: Unconnected input port 'full' of instance 'gen6' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 100: Unconnected input port 'reset' of instance 'gen6' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 102: Unconnected input port 'full' of instance 'gen7' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 102: Unconnected input port 'reset' of instance 'gen7' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 104: Unconnected input port 'full' of instance 'gen8' is tied to GND.
+WARNING:Xst:852 - "../../src/WaveGenController.v" line 104: Unconnected input port 'reset' of instance 'gen8' is tied to GND.
 Module <WaveGenController> is correct for synthesis.
  
 Analyzing module <GainLUT> in library <work>.
@@ -336,19 +331,8 @@ Analyzing module <UAReceive> in library <work>.
 	SymbolEdgeTime = 32'sb00000000000000000000010000100011
 Module <UAReceive> is correct for synthesis.
  
-Analyzing module <MIDIDecodeDataPath> in library <work>.
-Module <MIDIDecodeDataPath> is correct for synthesis.
- 
-Analyzing module <MIDIDec> in library <work>.
-Module <MIDIDec> is correct for synthesis.
- 
-Analyzing module <MIDIDecodeControl> in library <work>.
-	FIRSTBYTE = 5'b00001
-	INITIAL = 5'b00000
-	INVALID = 5'b10000
-	SECONDBYTE = 5'b00010
-	THIRDBYTE = 5'b00100
-Module <MIDIDecodeControl> is correct for synthesis.
+Analyzing module <Decoder> in library <work>.
+Module <Decoder> is correct for synthesis.
  
 
 =========================================================================
@@ -356,7 +340,6 @@ Module <MIDIDecodeControl> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <read_en> in unit <MIDIDecodeControl> has a constant value of 1 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <Debouncer>.
     Related source file is "../../src/Debouncer.v".
@@ -404,39 +387,24 @@ WARNING:Xst:1780 - Signal <reset_count> is never used or assigned. This unconnec
 Unit <Example> synthesized.
 
 
-Synthesizing Unit <MIDIDecodeControl>.
-    Related source file is "../../src/MIDIDecodeControl.v".
-WARNING:Xst:647 - Input <FIFOFull> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <cs> of Case statement line 70 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <cs> (optimization is then done without any risk)
+Synthesizing Unit <Decoder>.
+    Related source file is "../../src/Decoder.v".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <messageValid> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 29 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
    	- use the attribute 'signal_encoding user' to avoid onehot optimization
    	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-    Using one-hot encoding for signal <cs>.
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <cs> of Case statement line 70 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <cs> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <cs> of Case statement line 70 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <cs> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <cs> of Case statement line 70 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <cs> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <cs> of Case statement line 70 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <cs> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-WARNING:Xst:737 - Found 1-bit latch for signal <startGen>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 5-bit latch for signal <ns>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 5-bit register for signal <cs>.
-    Found 1-bit register for signal <sendWave>.
+    Found 1-bit register for signal <read>.
+    Found 8-bit register for signal <velocity>.
+    Found 1-bit register for signal <noteOn>.
+    Found 10-bit register for signal <freq>.
+    Found 5-bit register for signal <next>.
+    Found 5-bit register for signal <state>.
     Summary:
-	inferred   6 D-type flip-flop(s).
-Unit <MIDIDecodeControl> synthesized.
+	inferred  30 D-type flip-flop(s).
+Unit <Decoder> synthesized.
 
 
 Synthesizing Unit <v_rams_11>.
@@ -519,20 +487,15 @@ WARNING:Xst:646 - Signal <RXShift<0>> is assigned but never used. This unconnect
 Unit <UAReceive> synthesized.
 
 
-Synthesizing Unit <MIDIDec>.
-    Related source file is "../../src/MIDIDec.v".
-WARNING:Xst:737 - Found 8-bit latch for signal <veloc>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 8-bit register for signal <messageReg>.
-    Summary:
-	inferred   8 D-type flip-flop(s).
-Unit <MIDIDec> synthesized.
-
-
 Synthesizing Unit <AudioBuffer>.
     Related source file is "../../src/AudioBuffer.v".
 WARNING:Xst:646 - Signal <writeThrough> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <result<23:22>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <result<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <result3<23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <result3<4:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <result2<23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <result2<4:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <result1<23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <result1<4:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1872 - Variable <i> is used but never assigned.
 WARNING:Xst:1780 - Signal <count> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <a> is used but never assigned. This sourceless signal will be automatically connected to value 000010.
@@ -541,17 +504,23 @@ WARNING:Xst:653 - Signal <a> is used but never assigned. This sourceless signal 
     Found 1-bit register for signal <received>.
     Found 6-bit adder for signal <b>.
     Found 1-bit register for signal <calc>.
+    Found 18-bit register for signal <Data1>.
+    Found 18-bit register for signal <Data2>.
+    Found 18-bit register for signal <Data3>.
     Found 1-bit register for signal <hasAck>.
-    Found 6-bit comparator equal for signal <hasAck$cmp_eq0000> created at line 104.
+    Found 6-bit comparator equal for signal <hasAck$cmp_eq0000> created at line 112.
     Found 1-bit register for signal <isReady>.
-    Found 6-bit adder for signal <nextRead$add0000> created at line 63.
+    Found 6-bit adder for signal <nextRead$add0000> created at line 71.
     Found 6-bit adder for signal <nextWrite>.
-    Found 18-bit register for signal <prevData>.
     Found 6-bit up counter for signal <readPointer>.
-    Found 6-bit comparator equal for signal <readPointer$cmp_eq0001> created at line 104.
+    Found 6-bit comparator equal for signal <readPointer$cmp_eq0001> created at line 112.
     Found 1-bit register for signal <resetting>.
-    Found 24-bit adder for signal <result>.
-    Found 18x6-bit multiplier for signal <result$mult0000> created at line 36.
+    Found 24-bit adder for signal <result1>.
+    Found 18x6-bit multiplier for signal <result1$mult0000> created at line 41.
+    Found 24-bit adder for signal <result2>.
+    Found 18x6-bit multiplier for signal <result2$mult0000> created at line 42.
+    Found 24-bit adder for signal <result3>.
+    Found 18x6-bit multiplier for signal <result3$mult0000> created at line 44.
     Found 1-bit register for signal <syncReset>.
     Found 1-bit register for signal <syncResetD1>.
     Found 1-bit register for signal <WrEn>.
@@ -559,9 +528,9 @@ WARNING:Xst:653 - Signal <a> is used but never assigned. This sourceless signal 
     Found 6-bit up counter for signal <writePointer>.
     Summary:
 	inferred   2 Counter(s).
-	inferred  44 D-type flip-flop(s).
-	inferred   4 Adder/Subtractor(s).
-	inferred   1 Multiplier(s).
+	inferred  80 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
 	inferred   4 Comparator(s).
 Unit <AudioBuffer> synthesized.
 
@@ -569,16 +538,6 @@ Unit <AudioBuffer> synthesized.
 Synthesizing Unit <UART>.
     Related source file is "../../src/UART.v".
 Unit <UART> synthesized.
-
-
-Synthesizing Unit <MIDIDecodeDataPath>.
-    Related source file is "../../src/MIDIDecodeDataPath.v".
-    Found 10-bit register for signal <delayReg>.
-    Found 1-bit register for signal <typeReg>.
-    Found 8-bit register for signal <velocityReg>.
-    Summary:
-	inferred  19 D-type flip-flop(s).
-Unit <MIDIDecodeDataPath> synthesized.
 
 
 Synthesizing Unit <WaveGen>.
@@ -595,9 +554,8 @@ WARNING:Xst:646 - Signal <newConst<5:0>> is assigned but never used. This unconn
 WARNING:Xst:1780 - Signal <filterMul> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <dataOutInt2<25>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <dataOutInt2<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <constant2> is used but never assigned. This sourceless signal will be automatically connected to value 011101.
+WARNING:Xst:653 - Signal <constant2> is used but never assigned. This sourceless signal will be automatically connected to value 011110.
 WARNING:Xst:646 - Signal <active> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 64x10-bit ROM for signal <dataIn$mux0001> created at line 149.
     Found 1-bit register for signal <prepped>.
     Found 1-bit register for signal <ready>.
     Found 11-bit register for signal <constant>.
@@ -605,7 +563,8 @@ WARNING:Xst:646 - Signal <active> is assigned but never used. This unconnected s
     Found 6-bit up counter for signal <count2>.
     Found 18-bit register for signal <dataIn>.
     Found 18-bit adder for signal <dataIn$addsub0000>.
-    Found 10x8-bit multiplier for signal <dataIn$mult0007>.
+    Found 10x8-bit multiplier for signal <dataIn$share0000>.
+    Found 14-bit adder for signal <dataIn$sub0000>.
     Found 18x8-bit multiplier for signal <dataOutInt2>.
     Found 2-bit up counter for signal <done>.
     Found 1-bit register for signal <going>.
@@ -616,17 +575,19 @@ WARNING:Xst:646 - Signal <active> is assigned but never used. This unconnected s
     Found 10-bit adder for signal <nextWrite>.
     Found 10-bit up counter for signal <readAddress>.
     Found 1-bit register for signal <resetting>.
-    Found 2-bit comparator lessequal for signal <resetting$cmp_le0000> created at line 135.
+    Found 2-bit comparator lessequal for signal <resetting$cmp_le0000> created at line 141.
+    Found 8-bit adder for signal <volumeIn>.
+    Found 8-bit subtractor for signal <volumeIn$addsub0000> created at line 102.
+    Found 8-bit adder for signal <volumeIn$sub0000> created at line 102.
     Found 1-bit register for signal <WrEn>.
     Found 10-bit register for signal <writeAddress>.
-    Found 10-bit adder for signal <writeAddress$addsub0000> created at line 291.
-    Found 2-bit comparator greater for signal <writeAddress$cmp_gt0000> created at line 135.
-    Found 6-bit comparator lessequal for signal <writeAddress$cmp_le0000> created at line 308.
+    Found 10-bit adder for signal <writeAddress$addsub0000> created at line 432.
+    Found 2-bit comparator greater for signal <writeAddress$cmp_gt0000> created at line 141.
+    Found 6-bit comparator lessequal for signal <writeAddress$cmp_le0000> created at line 449.
     Summary:
-	inferred   1 ROM(s).
 	inferred   4 Counter(s).
 	inferred  45 D-type flip-flop(s).
-	inferred   4 Adder/Subtractor(s).
+	inferred   8 Adder/Subtractor(s).
 	inferred   4 Multiplier(s).
 	inferred   3 Comparator(s).
 Unit <WaveGen> synthesized.
@@ -647,12 +608,12 @@ WARNING:Xst:1780 - Signal <active3> is never used or assigned. This unconnected 
 WARNING:Xst:1780 - Signal <active2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <active1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 18-bit adder for signal <dataOut>.
-    Found 18-bit adder for signal <dataOut$addsub0000> created at line 112.
-    Found 18-bit adder for signal <dataOut$addsub0001> created at line 112.
-    Found 18-bit adder for signal <dataOut$addsub0002> created at line 112.
-    Found 18-bit adder for signal <dataOut$addsub0003> created at line 112.
-    Found 18-bit adder for signal <dataOut$addsub0004> created at line 112.
-    Found 18-bit adder for signal <dataOut$addsub0005> created at line 112.
+    Found 18-bit adder for signal <dataOut$addsub0000> created at line 114.
+    Found 18-bit adder for signal <dataOut$addsub0001> created at line 114.
+    Found 18-bit adder for signal <dataOut$addsub0002> created at line 114.
+    Found 18-bit adder for signal <dataOut$addsub0003> created at line 114.
+    Found 18-bit adder for signal <dataOut$addsub0004> created at line 114.
+    Found 18-bit adder for signal <dataOut$addsub0005> created at line 114.
     Found 1-bit register for signal <go1>.
     Found 1-bit register for signal <go2>.
     Found 1-bit register for signal <go3>.
@@ -670,27 +631,33 @@ Unit <WaveGenController> synthesized.
 Synthesizing Unit <ml505top>.
     Related source file is "../../src/FPGA_TOP_ML505.v".
 WARNING:Xst:647 - Input <GPIO_DIP> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <west2> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:653 - Signal <south2> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:1780 - Signal <thirdByteControl> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <secondByteControl> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <prepped> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <north2> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:646 - Signal <newW> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <newS> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <newN> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <newE> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <messageType> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <messageType> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <go> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <frame_count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <east2> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:1780 - Signal <firstByteControl> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <decodeType> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <bit_count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <MIDIValid> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <GPIO_COMPLED> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <FPGA_SERIAL_TX> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <FIFOOverflown> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FIFOFull> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FIFOEmpty> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <FIFOCount> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <FIFOAlmostFull> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <DataInReady> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:737 - Found 8-bit latch for signal <LED>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <north2>.
+    Found 1-bit register for signal <source>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
 Unit <ml505top> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -702,19 +669,20 @@ Macro Statistics
 # RAMs                                                 : 18
  1024x18-bit dual-port RAM                             : 16
  64x18-bit dual-port RAM                               : 2
-# ROMs                                                 : 8
- 64x10-bit ROM                                         : 8
-# Multipliers                                          : 33
+# Multipliers                                          : 35
  10x8-bit multiplier                                   : 8
  11x6-bit multiplier                                   : 8
  18x11-bit multiplier                                  : 8
- 18x6-bit multiplier                                   : 1
+ 18x6-bit multiplier                                   : 3
  18x8-bit multiplier                                   : 8
-# Adders/Subtractors                                   : 47
+# Adders/Subtractors                                   : 81
  10-bit adder                                          : 24
+ 14-bit adder                                          : 8
  18-bit adder                                          : 15
- 24-bit adder                                          : 1
+ 24-bit adder                                          : 3
  6-bit adder                                           : 3
+ 8-bit adder                                           : 16
+ 8-bit subtractor                                      : 8
  9-bit adder                                           : 4
 # Counters                                             : 45
  10-bit up counter                                     : 16
@@ -725,19 +693,17 @@ Macro Statistics
  4-bit up counter                                      : 1
  6-bit up counter                                      : 10
  8-bit up counter                                      : 1
-# Registers                                            : 124
- 1-bit register                                        : 73
+# Registers                                            : 128
+ 1-bit register                                        : 75
  10-bit register                                       : 27
  11-bit register                                       : 8
- 18-bit register                                       : 10
+ 18-bit register                                       : 12
  20-bit register                                       : 1
- 5-bit register                                        : 1
+ 5-bit register                                        : 2
  6-bit register                                        : 2
- 8-bit register                                        : 2
-# Latches                                              : 4
- 1-bit latch                                           : 1
- 5-bit latch                                           : 1
- 8-bit latch                                           : 2
+ 8-bit register                                        : 1
+# Latches                                              : 1
+ 8-bit latch                                           : 1
 # Comparators                                          : 56
  10-bit comparator lessequal                           : 17
  2-bit comparator greater                              : 8
@@ -758,8 +724,6 @@ Macro Statistics
 =========================================================================
 
 WARNING:Xst:1290 - Hierarchical block <west_parse> is unconnected in block <ml505top>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <north_parse> is unconnected in block <ml505top>.
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <south_parse> is unconnected in block <ml505top>.
    It will be removed from the design.
@@ -787,13 +751,15 @@ WARNING:Xst:1426 - The value init of the FF/Latch init hinder the constant clean
 WARNING:Xst:1426 - The value init of the FF/Latch init hinder the constant cleaning in the block gen8.
    You should achieve better results by setting this init to 0.
 WARNING:Xst:1710 - FF/Latch <audio_left_0> (without init value) has a constant value of 0 in block <codec_com>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <next_3> (without init value) has a constant value of 0 in block <dec>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <next_4> (without init value) has a constant value of 0 in block <dec>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <RXShift_0> of sequential type is unconnected in block <uareceive>.
 
 Synthesizing (advanced) Unit <AudioBuffer>.
-	Found pipelined multiplier on signal <result_mult0000>:
-		- 1 pipeline level(s) found in a register on signal <prevData>.
+	Found pipelined multiplier on signal <result1_mult0000>:
+		- 1 pipeline level(s) found in a register on signal <Data1>.
 		Pushing register(s) into the multiplier macro.
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_result_mult0000 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_result1_mult0000 by adding 2 register level(s).
 Unit <AudioBuffer> synthesized (advanced).
 
 Synthesizing (advanced) Unit <WaveGen>.
@@ -803,236 +769,32 @@ Synthesizing (advanced) Unit <WaveGen>.
 	Found pipelined multiplier on signal <newConst>:
 		- 1 pipeline level(s) found in a register on signal <constant>.
 		Pushing register(s) into the multiplier macro.
+INFO:Xst:3226 - The RAM <RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <RAM2/read_dpra>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <WrEn>          | high     |
+    |     addrA          | connected to signal <writeAddress>  |          |
+    |     diA            | connected to signal <dataIn>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <readAddress>   |          |
+    |     doB            | connected to signal <dataOutInt1>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_newData by adding 2 register level(s).
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_newConst by adding 2 register level(s).
 Unit <WaveGen> synthesized (advanced).
-
-Synthesizing (advanced) Unit <ml505top>.
-	Found pipelined multiplier on signal <Wgen/dataOut1>:
-		- 1 pipeline level(s) found in a register on signal <velocity>.
-		Pushing register(s) into the multiplier macro.
-	Found pipelined multiplier on signal <Wgen/dataOut2>:
-		- 1 pipeline level(s) found in a register on signal <velocity>.
-		Pushing register(s) into the multiplier macro.
-	Found pipelined multiplier on signal <Wgen/dataOut3>:
-		- 1 pipeline level(s) found in a register on signal <velocity>.
-		Pushing register(s) into the multiplier macro.
-	Found pipelined multiplier on signal <Wgen/dataOut4>:
-		- 1 pipeline level(s) found in a register on signal <velocity>.
-		Pushing register(s) into the multiplier macro.
-	Found pipelined multiplier on signal <Wgen/dataOut5>:
-		- 1 pipeline level(s) found in a register on signal <velocity>.
-		Pushing register(s) into the multiplier macro.
-	Found pipelined multiplier on signal <Wgen/dataOut6>:
-		- 1 pipeline level(s) found in a register on signal <velocity>.
-		Pushing register(s) into the multiplier macro.
-	Found pipelined multiplier on signal <Wgen/dataOut7>:
-		- 1 pipeline level(s) found in a register on signal <velocity>.
-		Pushing register(s) into the multiplier macro.
-	Found pipelined multiplier on signal <Wgen/dataOut8>:
-		- 1 pipeline level(s) found in a register on signal <velocity>.
-		Pushing register(s) into the multiplier macro.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Wgen/gen1/Mrom_dataIn_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Wgen/gen2/Mrom_dataIn_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Wgen/gen3/Mrom_dataIn_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Wgen/gen4/Mrom_dataIn_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Wgen/gen5/Mrom_dataIn_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Wgen/gen6/Mrom_dataIn_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Wgen/gen7/Mrom_dataIn_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Wgen/gen8/Mrom_dataIn_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst:3226 - The RAM <Wgen/gen1/RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <Wgen/gen1/RAM2/read_dpra>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <Wgen/gen1/WrEn> | high     |
-    |     addrA          | connected to signal <Wgen/gen1/writeAddress> |          |
-    |     diA            | connected to signal <Wgen/gen1/dataIn> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <Wgen/gen1/readAddress> |          |
-    |     doB            | connected to signal <Wgen/gen1/dataOutInt1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <Wgen/gen2/RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <Wgen/gen2/RAM2/read_dpra>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <Wgen/gen2/WrEn> | high     |
-    |     addrA          | connected to signal <Wgen/gen2/writeAddress> |          |
-    |     diA            | connected to signal <Wgen/gen2/dataIn> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <Wgen/gen2/readAddress> |          |
-    |     doB            | connected to signal <Wgen/gen2/dataOutInt1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <Wgen/gen3/RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <Wgen/gen3/RAM2/read_dpra>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <Wgen/gen3/WrEn> | high     |
-    |     addrA          | connected to signal <Wgen/gen3/writeAddress> |          |
-    |     diA            | connected to signal <Wgen/gen3/dataIn> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <Wgen/gen3/readAddress> |          |
-    |     doB            | connected to signal <Wgen/gen3/dataOutInt1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <Wgen/gen4/RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <Wgen/gen4/RAM2/read_dpra>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <Wgen/gen4/WrEn> | high     |
-    |     addrA          | connected to signal <Wgen/gen4/writeAddress> |          |
-    |     diA            | connected to signal <Wgen/gen4/dataIn> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <Wgen/gen4/readAddress> |          |
-    |     doB            | connected to signal <Wgen/gen4/dataOutInt1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <Wgen/gen5/RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <Wgen/gen5/RAM2/read_dpra>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <Wgen/gen5/WrEn> | high     |
-    |     addrA          | connected to signal <Wgen/gen5/writeAddress> |          |
-    |     diA            | connected to signal <Wgen/gen5/dataIn> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <Wgen/gen5/readAddress> |          |
-    |     doB            | connected to signal <Wgen/gen5/dataOutInt1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <Wgen/gen6/RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <Wgen/gen6/RAM2/read_dpra>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <Wgen/gen6/WrEn> | high     |
-    |     addrA          | connected to signal <Wgen/gen6/writeAddress> |          |
-    |     diA            | connected to signal <Wgen/gen6/dataIn> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <Wgen/gen6/readAddress> |          |
-    |     doB            | connected to signal <Wgen/gen6/dataOutInt1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <Wgen/gen8/RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <Wgen/gen8/RAM2/read_dpra>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <Wgen/gen8/WrEn> | high     |
-    |     addrA          | connected to signal <Wgen/gen8/writeAddress> |          |
-    |     diA            | connected to signal <Wgen/gen8/dataIn> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <Wgen/gen8/readAddress> |          |
-    |     doB            | connected to signal <Wgen/gen8/dataOutInt1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <Wgen/gen7/RAM2/Mram_ram_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <Wgen/gen7/RAM2/read_dpra>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <Wgen/gen7/WrEn> | high     |
-    |     addrA          | connected to signal <Wgen/gen7/writeAddress> |          |
-    |     diA            | connected to signal <Wgen/gen7/dataIn> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <Wgen/gen7/readAddress> |          |
-    |     doB            | connected to signal <Wgen/gen7/dataOutInt1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Wgen/gen1/Mmult_dataOutInt2 by adding 2 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Wgen/gen2/Mmult_dataOutInt2 by adding 2 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Wgen/gen3/Mmult_dataOutInt2 by adding 2 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Wgen/gen4/Mmult_dataOutInt2 by adding 2 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Wgen/gen5/Mmult_dataOutInt2 by adding 2 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Wgen/gen6/Mmult_dataOutInt2 by adding 2 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Wgen/gen7/Mmult_dataOutInt2 by adding 2 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Wgen/gen8/Mmult_dataOutInt2 by adding 2 register level(s).
-Unit <ml505top> synthesized (advanced).
 
 Synthesizing (advanced) Unit <v_rams_11>.
 INFO:Xst:3231 - The small RAM <Mram_ram> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -1077,20 +839,21 @@ Macro Statistics
 # RAMs                                                 : 10
  1024x18-bit dual-port block RAM                       : 8
  64x18-bit dual-port distributed RAM                   : 2
-# ROMs                                                 : 8
- 64x10-bit ROM                                         : 8
 # Multipliers                                          : 33
  10x8-bit multiplier                                   : 8
  11x6-bit registered multiplier                        : 8
  18x11-bit registered multiplier                       : 8
  18x6-bit registered multiplier                        : 1
- 18x8-bit registered multiplier                        : 8
-# Adders/Subtractors                                   : 47
+ 18x8-bit multiplier                                   : 8
+# Adders/Subtractors                                   : 79
  10-bit adder                                          : 24
+ 14-bit adder                                          : 8
  18-bit adder                                          : 15
- 22-bit adder                                          : 1
+ 23-bit adder                                          : 1
  5-bit adder                                           : 4
  6-bit adder                                           : 3
+ 8-bit adder                                           : 16
+ 8-bit subtractor                                      : 8
 # Counters                                             : 45
  10-bit up counter                                     : 16
  11-bit up counter                                     : 2
@@ -1102,10 +865,8 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 414
  Flip-Flops                                            : 414
-# Latches                                              : 4
- 1-bit latch                                           : 1
- 5-bit latch                                           : 1
- 8-bit latch                                           : 2
+# Latches                                              : 1
+ 8-bit latch                                           : 1
 # Comparators                                          : 56
  10-bit comparator lessequal                           : 17
  2-bit comparator greater                              : 8
@@ -1126,40 +887,19 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <audio_left_0> (without init value) has a constant value of 0 in block <Example>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <audio_left_1> (without init value) has a constant value of 0 in block <Example>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <next_3> (without init value) has a constant value of 0 in block <Decoder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <next_4> (without init value) has a constant value of 0 in block <Decoder>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <TXShift_9> (without init value) has a constant value of 1 in block <UATransmit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1426 - The value init of the FF/Latch Wgen/gen2/init hinder the constant cleaning in the block ml505top.
+WARNING:Xst:1426 - The value init of the FF/Latch init hinder the constant cleaning in the block WaveGen.
    You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch Wgen/gen3/init hinder the constant cleaning in the block ml505top.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch Wgen/gen4/init hinder the constant cleaning in the block ml505top.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch Wgen/gen5/init hinder the constant cleaning in the block ml505top.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch Wgen/gen6/init hinder the constant cleaning in the block ml505top.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch Wgen/gen7/init hinder the constant cleaning in the block ml505top.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch Wgen/gen8/init hinder the constant cleaning in the block ml505top.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch Wgen/gen1/init hinder the constant cleaning in the block ml505top.
-   You should achieve better results by setting this init to 0.
-INFO:Xst:2261 - The FF/Latch <7> in Unit <LPM_LATCH_5> is equivalent to the following 7 FFs/Latches, which will be removed : <6> <5> <4> <3> <2> <1> <0> 
+INFO:Xst:2261 - The FF/Latch <7> in Unit <LPM_LATCH_1> is equivalent to the following 7 FFs/Latches, which will be removed : <6> <5> <4> <3> <2> <1> <0> 
 WARNING:Xst:2677 - Node <uart/txreg/Out_0> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: _old_freq_9<9>, freq<9>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: _old_freq_9<8>, freq<8>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: _old_freq_9<7>, freq<7>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: freq<6>, _old_freq_9<6>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: freq<5>, _old_freq_9<5>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: _old_freq_9<4>, freq<4>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: _old_freq_9<3>, freq<3>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: _old_freq_9<2>, freq<2>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: _old_freq_9<1>, freq<1>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: freq<0>, _old_freq_9<0>.
-WARNING:Xst:2170 - Unit MIDIDec : the following signal(s) form a combinatorial loop: mType.
 
 Optimizing unit <ml505top> ...
 
 Optimizing unit <Example> ...
+
+Optimizing unit <Decoder> ...
 
 Optimizing unit <v_rams_11> ...
 
@@ -1167,467 +907,6 @@ Optimizing unit <UATransmit> ...
 
 Optimizing unit <UAReceive> ...
 
-Optimizing unit <MIDIDecodeControl> ...
-
-Optimizing unit <MIDIDec> ...
-
 Optimizing unit <AudioBuffer> ...
-WARNING:Xst:2677 - Node <uart/uatransmit/BitCounter_2> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/BitCounter_1> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/BitCounter_3> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/BitCounter_0> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_10> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_9> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_8> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_7> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_6> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_5> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_4> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_3> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_2> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_1> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_0> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_8> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_7> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_6> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_5> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_4> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_3> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_2> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_1> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_0> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/read_a_0> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/read_a_1> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/read_a_2> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/read_a_3> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/read_a_4> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/read_a_5> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram3> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram1> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram2> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram6> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram4> of sequential type is unconnected in block <ml505top>.
-WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram5> of sequential type is unconnected in block <ml505top>.
 
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ml505top, actual ratio is 5.
-Latch LED_7 has been replicated 7 time(s) to handle iob=true attribute.
-
-Final Macro Processing ...
-
-Processing Unit <ml505top> :
-	Found 2-bit shift register for signal <uart/uareceive/RXShift_8>.
-	Found 2-bit shift register for signal <Abuf/syncReset>.
-Unit <ml505top> processed.
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 764
- Flip-Flops                                            : 764
-# Shift Registers                                      : 2
- 2-bit shift register                                  : 2
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Final Report                               *
-=========================================================================
-Final Results
-RTL Top Level Output File Name     : ml505top.ngr
-Top Level Output File Name         : ml505top
-Output Format                      : NGC
-Optimization Goal                  : Speed
-Keep Hierarchy                     : No
-
-Design Statistics
-# IOs                              : 29
-
-Cell Usage :
-# BELS                             : 4557
-#      GND                         : 1
-#      INV                         : 74
-#      LUT1                        : 198
-#      LUT2                        : 462
-#      LUT3                        : 281
-#      LUT4                        : 384
-#      LUT5                        : 415
-#      LUT6                        : 823
-#      MUXCY                       : 926
-#      MUXF7                       : 61
-#      VCC                         : 1
-#      XORCY                       : 931
-# FlipFlops/Latches                : 788
-#      FD                          : 86
-#      FDCE                        : 4
-#      FDE                         : 435
-#      FDP                         : 8
-#      FDR                         : 39
-#      FDRE                        : 179
-#      FDRSE                       : 4
-#      FDS                         : 9
-#      FDSE                        : 2
-#      LD                          : 6
-#      LDCP                        : 8
-#      LDP_1                       : 8
-# RAMS                             : 14
-#      RAM64M                      : 6
-#      RAMB18                      : 8
-# Shift Registers                  : 2
-#      SRLC16E                     : 2
-# Clock Buffers                    : 3
-#      BUFG                        : 2
-#      BUFGP                       : 1
-# IO Buffers                       : 15
-#      IBUF                        : 2
-#      IBUFG                       : 1
-#      OBUF                        : 12
-# DSPs                             : 17
-#      DSP48E                      : 17
-# Others                           : 3
-#      chipscope_icon              : 1
-#      chipscope_ila               : 1
-#      fifo_generator_v9_1         : 1
-=========================================================================
-
-Device utilization summary:
----------------------------
-
-Selected Device : 5vlx110tff1136-1 
-
-
-Slice Logic Utilization: 
- Number of Slice Registers:             780  out of  69120     1%  
- Number of Slice LUTs:                 2663  out of  69120     3%  
-    Number used as Logic:              2637  out of  69120     3%  
-    Number used as Memory:               26  out of  17920     0%  
-       Number used as RAM:               24
-       Number used as SRL:                2
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2752
-   Number with an unused Flip Flop:    1972  out of   2752    71%  
-   Number with an unused LUT:            89  out of   2752     3%  
-   Number of fully used LUT-FF pairs:   691  out of   2752    25%  
-   Number of unique control sets:       137
-
-IO Utilization: 
- Number of IOs:                          29
- Number of bonded IOBs:                  16  out of    640     2%  
-    IOB Flip Flops/Latches:               8
-
-Specific Feature Utilization:
- Number of Block RAM/FIFO:                4  out of    148     2%  
-    Number using Block RAM only:          4
- Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
- Number of DSP48Es:                      17  out of     64    26%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-TIMING REPORT
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
--------------------------------------------------------------------------+--------------------------------------------+-------+
-Clock Signal                                                             | Clock buffer(FF name)                      | Load  |
--------------------------------------------------------------------------+--------------------------------------------+-------+
-USER_CLK                                                                 | IBUFG+BUFG                                 | 785   |
-MIDI_IN                                                                  | IBUF+BUFG                                  | 8     |
-AUDIO_BIT_CLK                                                            | BUFGP                                      | 14    |
-MIDIDecodeControl/ns_not0001(MIDIDecodeControl/ns_not00011:O)            | NONE(*)(MIDIDecodeControl/ns_4)            | 5     |
-MIDIDecodeControl/startGen_not0001(MIDIDecodeControl/startGen_not00011:O)| NONE(*)(MIDIDecodeControl/startGen)        | 1     |
-rst(rst_parse/out68:O)                                                   | NONE(*)(MIDIDecodeDataPath/decoder/veloc_7)| 8     |
--------------------------------------------------------------------------+--------------------------------------------+-------+
-(*) These 3 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
-
-Asynchronous Control Signals Information:
-----------------------------------------
--------------------------------------------------------------------------------------------+-----------------------------------------+-------+
-Control Signal                                                                             | Buffer(FF name)                         | Load  |
--------------------------------------------------------------------------------------------+-----------------------------------------+-------+
-rst(rst_parse/out68:O)                                                                     | NONE(LED_7)                             | 20    |
-MIDIDecodeDataPath/decoder/veloc_0__and0000(MIDIDecodeDataPath/decoder/veloc_0__and00002:O)| NONE(MIDIDecodeDataPath/decoder/veloc_0)| 1     |
-MIDIDecodeDataPath/decoder/veloc_0__and0001(MIDIDecodeDataPath/decoder/veloc_mux0000<0>1:O)| NONE(MIDIDecodeDataPath/decoder/veloc_0)| 1     |
-MIDIDecodeDataPath/decoder/veloc_1__and0000(MIDIDecodeDataPath/decoder/veloc_1__and00001:O)| NONE(MIDIDecodeDataPath/decoder/veloc_1)| 1     |
-MIDIDecodeDataPath/decoder/veloc_1__and0001(MIDIDecodeDataPath/decoder/veloc_mux0000<1>1:O)| NONE(MIDIDecodeDataPath/decoder/veloc_1)| 1     |
-MIDIDecodeDataPath/decoder/veloc_2__and0000(MIDIDecodeDataPath/decoder/veloc_2__and00001:O)| NONE(MIDIDecodeDataPath/decoder/veloc_2)| 1     |
-MIDIDecodeDataPath/decoder/veloc_2__and0001(MIDIDecodeDataPath/decoder/veloc_mux0000<2>1:O)| NONE(MIDIDecodeDataPath/decoder/veloc_2)| 1     |
-MIDIDecodeDataPath/decoder/veloc_3__and0000(MIDIDecodeDataPath/decoder/veloc_3__and00001:O)| NONE(MIDIDecodeDataPath/decoder/veloc_3)| 1     |
-MIDIDecodeDataPath/decoder/veloc_3__and0001(MIDIDecodeDataPath/decoder/veloc_mux0000<3>1:O)| NONE(MIDIDecodeDataPath/decoder/veloc_3)| 1     |
-MIDIDecodeDataPath/decoder/veloc_4__and0000(MIDIDecodeDataPath/decoder/veloc_4__and00001:O)| NONE(MIDIDecodeDataPath/decoder/veloc_4)| 1     |
-MIDIDecodeDataPath/decoder/veloc_4__and0001(MIDIDecodeDataPath/decoder/veloc_mux0000<4>1:O)| NONE(MIDIDecodeDataPath/decoder/veloc_4)| 1     |
-MIDIDecodeDataPath/decoder/veloc_5__and0000(MIDIDecodeDataPath/decoder/veloc_5__and00001:O)| NONE(MIDIDecodeDataPath/decoder/veloc_5)| 1     |
-MIDIDecodeDataPath/decoder/veloc_5__and0001(MIDIDecodeDataPath/decoder/veloc_mux0000<5>1:O)| NONE(MIDIDecodeDataPath/decoder/veloc_5)| 1     |
-MIDIDecodeDataPath/decoder/veloc_6__and0000(MIDIDecodeDataPath/decoder/veloc_6__and00001:O)| NONE(MIDIDecodeDataPath/decoder/veloc_6)| 1     |
-MIDIDecodeDataPath/decoder/veloc_6__and0001(MIDIDecodeDataPath/decoder/veloc_mux0000<6>1:O)| NONE(MIDIDecodeDataPath/decoder/veloc_6)| 1     |
-MIDIDecodeDataPath/decoder/veloc_7__and0000(MIDIDecodeDataPath/decoder/veloc_7__and00001:O)| NONE(MIDIDecodeDataPath/decoder/veloc_7)| 1     |
-MIDIDecodeDataPath/decoder/veloc_7__and0001(MIDIDecodeDataPath/decoder/veloc_mux0000<7>1:O)| NONE(MIDIDecodeDataPath/decoder/veloc_7)| 1     |
--------------------------------------------------------------------------------------------+-----------------------------------------+-------+
-
-Timing Summary:
----------------
-Speed Grade: -1
-
-   Minimum period: 13.345ns (Maximum Frequency: 74.934MHz)
-   Minimum input arrival time before clock: 2.414ns
-   Maximum output required time after clock: 5.320ns
-   Maximum combinational path delay: 3.611ns
-
-Timing Detail:
---------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'USER_CLK'
-  Clock period: 13.345ns (frequency: 74.934MHz)
-  Total number of paths / destination ports: 47664619 / 2114
--------------------------------------------------------------------------
-Delay:               13.345ns (Levels of Logic = 24)
-  Source:            Wgen/gen3/RAM2/Mram_ram_ren (RAM)
-  Destination:       Abuf/writeData_17 (FF)
-  Source Clock:      USER_CLK rising
-  Destination Clock: USER_CLK rising
-
-  Data Path: Wgen/gen3/RAM2/Mram_ram_ren to Abuf/writeData_17
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     RAMB18:CLKB->DOPB1    8   2.180   0.374  Wgen/gen3/RAM2/Mram_ram_ren (Wgen/gen3/dataOutInt1<17>)
-     DSP48E:A17->P9        3   3.646   0.721  Wgen/gen3/Mmult_dataOutInt2 (Wgen/dataOut3<2>)
-     LUT6:I3->O            1   0.094   0.576  Wgen/Madd_dataOut_addsub0001R1111 (Wgen/Madd_dataOut_addsub0001R1)
-     LUT2:I0->O            1   0.094   0.000  Wgen/Madd_dataOut_addsub0001_Madd_lut<2> (Wgen/Madd_dataOut_addsub0001_Madd_lut<2>)
-     MUXCY:S->O            1   0.372   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<2> (Wgen/Madd_dataOut_addsub0001_Madd_cy<2>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<3> (Wgen/Madd_dataOut_addsub0001_Madd_cy<3>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<4> (Wgen/Madd_dataOut_addsub0001_Madd_cy<4>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<5> (Wgen/Madd_dataOut_addsub0001_Madd_cy<5>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<6> (Wgen/Madd_dataOut_addsub0001_Madd_cy<6>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<7> (Wgen/Madd_dataOut_addsub0001_Madd_cy<7>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<8> (Wgen/Madd_dataOut_addsub0001_Madd_cy<8>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<9> (Wgen/Madd_dataOut_addsub0001_Madd_cy<9>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<10> (Wgen/Madd_dataOut_addsub0001_Madd_cy<10>)
-     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<11> (Wgen/Madd_dataOut_addsub0001_Madd_cy<11>)
-     XORCY:CI->O           3   0.357   0.587  Wgen/Madd_dataOut_addsub0001_Madd_xor<12> (Wgen/dataOut_addsub0001<12>)
-     LUT4:I2->O            1   0.094   0.000  Wgen/Madd_dataOut_addsub0003_Madd_lut<13> (Wgen/Madd_dataOut_addsub0003_Madd_lut<13>)
-     MUXCY:S->O            1   0.372   0.000  Wgen/Madd_dataOut_addsub0003_Madd_cy<13> (Wgen/Madd_dataOut_addsub0003_Madd_cy<13>)
-     XORCY:CI->O           3   0.357   0.587  Wgen/Madd_dataOut_addsub0003_Madd_xor<14> (Wgen/dataOut_addsub0003<14>)
-     LUT4:I2->O            1   0.094   0.000  Wgen/Madd_dataOut_addsub0005_Madd_lut<15> (Wgen/Madd_dataOut_addsub0005_Madd_lut<15>)
-     MUXCY:S->O            1   0.372   0.000  Wgen/Madd_dataOut_addsub0005_Madd_cy<15> (Wgen/Madd_dataOut_addsub0005_Madd_cy<15>)
-     XORCY:CI->O           1   0.357   0.480  Wgen/Madd_dataOut_addsub0005_Madd_xor<16> (Wgen/dataOut_addsub0005<16>)
-     LUT3:I2->O            1   0.094   0.000  Wgen/Madd_dataOut_lut<16> (Wgen/Madd_dataOut_lut<16>)
-     MUXCY:S->O            0   0.372   0.000  Wgen/Madd_dataOut_cy<16> (Wgen/Madd_dataOut_cy<16>)
-     XORCY:CI->O           1   0.357   0.480  Wgen/Madd_dataOut_xor<17> (datain_rnm0<17>)
-     LUT3:I2->O            1   0.094   0.000  Abuf/writeData_mux0000<17>1 (Abuf/writeData_mux0000<17>)
-     FDE:D                    -0.018          Abuf/writeData_17
-    ----------------------------------------
-    Total                     13.345ns (9.540ns logic, 3.805ns route)
-                                       (71.5% logic, 28.5% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'AUDIO_BIT_CLK'
-  Clock period: 5.271ns (frequency: 189.717MHz)
-  Total number of paths / destination ports: 229 / 19
--------------------------------------------------------------------------
-Delay:               5.271ns (Levels of Logic = 6)
-  Source:            codec_com/bit_count_2 (FF)
-  Destination:       codec_com/ac97_sdata_out (FF)
-  Source Clock:      AUDIO_BIT_CLK rising
-  Destination Clock: AUDIO_BIT_CLK rising
-
-  Data Path: codec_com/bit_count_2 to codec_com/ac97_sdata_out
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDP:C->Q             20   0.471   1.173  codec_com/bit_count_2 (codec_com/bit_count_2)
-     LUT6:I0->O            1   0.094   0.973  codec_com/Mmux__varindex0003_91 (codec_com/Mmux__varindex0003_91)
-     LUT6:I1->O            1   0.094   0.000  codec_com/Mmux__varindex0003_2_f711 (codec_com/Mmux__varindex0003_2_f71)
-     MUXF7:I1->O           3   0.254   0.984  codec_com/Mmux__varindex0003_2_f71_f7 (codec_com/_varindex0003)
-     LUT5:I0->O            1   0.094   0.789  codec_com/ac97_sdata_out_mux00001794 (codec_com/ac97_sdata_out_mux00001794)
-     LUT6:I2->O            1   0.094   0.000  codec_com/ac97_sdata_out_mux000011095_F (N698)
-     MUXF7:I0->O           1   0.251   0.000  codec_com/ac97_sdata_out_mux000011095 (codec_com/ac97_sdata_out_mux0000)
-     FDE:D                    -0.018          codec_com/ac97_sdata_out
-    ----------------------------------------
-    Total                      5.271ns (1.352ns logic, 3.919ns route)
-                                       (25.6% logic, 74.4% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'rst'
-  Clock period: 1.941ns (frequency: 515.138MHz)
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Delay:               1.941ns (Levels of Logic = 1)
-  Source:            MIDIDecodeDataPath/decoder/veloc_7 (LATCH)
-  Destination:       MIDIDecodeDataPath/decoder/veloc_7 (LATCH)
-  Source Clock:      rst falling
-  Destination Clock: rst falling
-
-  Data Path: MIDIDecodeDataPath/decoder/veloc_7 to MIDIDecodeDataPath/decoder/veloc_7
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDCP:G->Q            91   0.736   1.111  MIDIDecodeDataPath/decoder/veloc_7 (MIDIDecodeDataPath/decoder/veloc_7)
-     LUT5:I0->O            2   0.094   0.000  MIDIDecodeDataPath/decoder/veloc_mux0000<7>1 (MIDIDecodeDataPath/decoder/veloc_7__and0001)
-     LDCP:D                   -0.071          MIDIDecodeDataPath/decoder/veloc_7
-    ----------------------------------------
-    Total                      1.941ns (0.830ns logic, 1.111ns route)
-                                       (42.8% logic, 57.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'USER_CLK'
-  Total number of paths / destination ports: 52 / 42
--------------------------------------------------------------------------
-Offset:              2.414ns (Levels of Logic = 2)
-  Source:            GPIO_COMPSW_C (PAD)
-  Destination:       rst_parse/count_0 (FF)
-  Destination Clock: USER_CLK rising
-
-  Data Path: GPIO_COMPSW_C to rst_parse/count_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   0.818   0.336  GPIO_COMPSW_C_IBUF (GPIO_COMPSW_C_IBUF)
-     INV:I->O             22   0.238   0.449  GPIO_COMPSW_C_inv1_INV_0 (GPIO_COMPSW_C_inv)
-     FDR:R                     0.573          rst_parse/count_0
-    ----------------------------------------
-    Total                      2.414ns (1.629ns logic, 0.785ns route)
-                                       (67.5% logic, 32.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'MIDIDecodeControl/ns_not0001'
-  Total number of paths / destination ports: 10 / 5
--------------------------------------------------------------------------
-Offset:              1.201ns (Levels of Logic = 1)
-  Source:            fifo_generator_v9_1:valid (PAD)
-  Destination:       MIDIDecodeControl/ns_2 (LATCH)
-  Destination Clock: MIDIDecodeControl/ns_not0001 falling
-
-  Data Path: fifo_generator_v9_1:valid to MIDIDecodeControl/ns_2
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    fifo_generator_v9_1:valid    8   0.000   1.107  fifo_generator_v9_1 (DataInValid)
-     LUT6:I0->O            1   0.094   0.000  MIDIDecodeControl/ns_mux0000<2>1 (MIDIDecodeControl/ns_mux0000<2>)
-     LD:D                     -0.071          MIDIDecodeControl/ns_2
-    ----------------------------------------
-    Total                      1.201ns (0.094ns logic, 1.107ns route)
-                                       (7.8% logic, 92.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'AUDIO_BIT_CLK'
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Offset:              3.259ns (Levels of Logic = 1)
-  Source:            codec_com/ac97_sdata_out (FF)
-  Destination:       AUDIO_SDATA_OUT (PAD)
-  Source Clock:      AUDIO_BIT_CLK rising
-
-  Data Path: codec_com/ac97_sdata_out to AUDIO_SDATA_OUT
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              1   0.471   0.336  codec_com/ac97_sdata_out (codec_com/ac97_sdata_out)
-     OBUF:I->O                 2.452          AUDIO_SDATA_OUT_OBUF (AUDIO_SDATA_OUT)
-    ----------------------------------------
-    Total                      3.259ns (2.923ns logic, 0.336ns route)
-                                       (89.7% logic, 10.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'USER_CLK'
-  Total number of paths / destination ports: 169 / 40
--------------------------------------------------------------------------
-Offset:              5.320ns (Levels of Logic = 3)
-  Source:            rst_parse/count_4 (FF)
-  Destination:       FLASH_AUDIO_RESET_B (PAD)
-  Source Clock:      USER_CLK rising
-
-  Data Path: rst_parse/count_4 to FLASH_AUDIO_RESET_B
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              2   0.471   1.074  rst_parse/count_4 (rst_parse/count_4)
-     LUT6:I0->O            2   0.094   0.794  rst_parse/out10 (rst_parse/out10)
-     LUT4:I0->O            2   0.094   0.341  codec_com/audio_reset_b1 (FLASH_AUDIO_RESET_B_OBUF)
-     OBUF:I->O                 2.452          FLASH_AUDIO_RESET_B_OBUF (FLASH_AUDIO_RESET_B)
-    ----------------------------------------
-    Total                      5.320ns (3.111ns logic, 2.209ns route)
-                                       (58.5% logic, 41.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'MIDI_IN'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              3.520ns (Levels of Logic = 1)
-  Source:            LED_7_1 (LATCH)
-  Destination:       GPIO_LED<7> (PAD)
-  Source Clock:      MIDI_IN rising
-
-  Data Path: LED_7_1 to GPIO_LED<7>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDP_1:G->Q            1   0.732   0.336  LED_7_1 (LED_7_1)
-     OBUF:I->O                 2.452          GPIO_LED_7_OBUF (GPIO_LED<7>)
-    ----------------------------------------
-    Total                      3.520ns (3.184ns logic, 0.336ns route)
-                                       (90.5% logic, 9.5% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 15 / 13
--------------------------------------------------------------------------
-Delay:               3.611ns (Levels of Logic = 2)
-  Source:            MIDI_IN (PAD)
-  Destination:       GPIO_COMPLED_C (PAD)
-
-  Data Path: MIDI_IN to GPIO_COMPLED_C
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             2   0.818   0.341  MIDI_IN_IBUF (GPIO_COMPLED_C_OBUF1)
-     OBUF:I->O                 2.452          GPIO_COMPLED_C_OBUF (GPIO_COMPLED_C)
-    ----------------------------------------
-    Total                      3.611ns (3.270ns logic, 0.341ns route)
-                                       (90.6% logic, 9.4% route)
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 219.00 secs
-Total CPU time to Xst completion: 217.88 secs
- 
---> 
-
-
-Total memory usage is 797008 kilobytes
-
-Number of errors   :    0 (   0 filtered)
-Number of warnings :  162 (   0 filtered)
-Number of infos    :   49 (   0 filtered)
-
+Optimizing unit <WaveGenController> ...

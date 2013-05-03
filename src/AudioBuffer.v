@@ -20,7 +20,9 @@ module AudioBuffer(ready,received,ack,valid,dataIn,dataOut,full,reset,clk);
    reg 	      resetting = 0;
    reg 	      received = 0;
    wire [17:0]  currentData;
-   reg [17:0]  prevData;  
+   reg [17:0]  Data1;
+   reg [17:0]  Data2;
+   reg [17:0]  Data3;
    reg [17:0]  writeData;
    wire [17:0]  writeThrough;
    reg [5:0] 	a = 6'b000010;
@@ -32,8 +34,14 @@ module AudioBuffer(ready,received,ack,valid,dataIn,dataOut,full,reset,clk);
    wire [5:0] 	b;
    assign b = 5'b10000 - a;
 
-   wire [23:0] 	result;
-   assign result = ($signed(prevData)*$signed(b) + $signed(currentData)*$signed(a));
+   wire [23:0] 	result1;
+   wire [23:0] 	result2;
+   wire [23:0] 	result3;
+   
+   assign result1 = ($signed(Data1)*$signed(b) + $signed(currentData)*$signed(a));
+   assign result2 = ($signed(Data2)*$signed(b) + $signed(Data1)*$signed(a));
+
+   assign result3 = ($signed(Data3)*$signed(b) + $signed(Data2)*$signed(a));
    
    
    
@@ -111,7 +119,9 @@ module AudioBuffer(ready,received,ack,valid,dataIn,dataOut,full,reset,clk);
 	 else if (!ack) begin
 	    hasAck <= 0;
 	    if (!calc) begin
-	       prevData <=  result[21:4];
+	       Data1 <=  result1[22:5];
+	       Data2 <=  result2[22:5];
+	       Data3 <=  result3[22:5];
 	       calc <= 1;
 	    end
 	 end	    
@@ -137,7 +147,7 @@ module AudioBuffer(ready,received,ack,valid,dataIn,dataOut,full,reset,clk);
    end
 	    
 	 
-   assign dataOut = prevData;
+   assign dataOut = Data1;
 
       
   /* always @(reset,ack,ready) begin

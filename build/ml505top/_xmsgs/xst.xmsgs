@@ -11,13 +11,13 @@
 <msg type="warning" file="Xst" num="863" delta="old" >&quot;<arg fmt="%s" index="1">../../src/FPGA_TOP_ML505.v</arg>&quot; line <arg fmt="%d" index="2">95</arg>: Name conflict (<arg fmt="%s" index="3">&lt;dataIn&gt; and &lt;DataIn&gt;, renaming dataIn as datain_rnm0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">../../src/chipscope_icon.v</arg>&quot; line <arg fmt="%d" index="2">181</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">chipscope_icon</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">../../src/chipscope_icon.v</arg>&quot; line <arg fmt="%d" index="2">168</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">chipscope_icon</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">../../src/chipscope_ila.v</arg>&quot; line <arg fmt="%d" index="2">188</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">chipscope_ila</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">../../src/chipscope_ila.v</arg>&quot; line <arg fmt="%d" index="2">175</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">chipscope_ila</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">../../src/fifo_generator_v9_1.v</arg>&quot; line <arg fmt="%d" index="2">251</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fifo_generator_v9_1</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">../../src/fifo_generator_v9_1.v</arg>&quot; line <arg fmt="%d" index="2">239</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fifo_generator_v9_1</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="916" delta="old" >&quot;<arg fmt="%s" index="1">../../src/Example.v</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Delay is ignored for synthesis.
@@ -50,58 +50,55 @@
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">audio_right</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="2320" delta="old" >&quot;<arg fmt="%s" index="1">../../src/AudioBuffer.v</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Value for signal <arg fmt="%s" index="3">writeData</arg> in initial block is not constant. The initialization will be ignored.
+<msg type="warning" file="Xst" num="2320" delta="old" >&quot;<arg fmt="%s" index="1">../../src/AudioBuffer.v</arg>&quot; line <arg fmt="%d" index="2">54</arg>: Value for signal <arg fmt="%s" index="3">writeData</arg> in initial block is not constant. The initialization will be ignored.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">88</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen1</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">90</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen1</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">88</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen1</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">90</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen1</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">90</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen2</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">92</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen2</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">90</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen2</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">92</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen2</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">92</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen3</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">94</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen3</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">92</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen3</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">94</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen3</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">94</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen4</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">96</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen4</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">94</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen4</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">96</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen4</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">96</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen5</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen5</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">96</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen5</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen5</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen6</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">100</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen6</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">98</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen6</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">100</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen6</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">100</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen7</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">102</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen7</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">100</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen7</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">102</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen7</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">102</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen8</arg>&apos; is tied to GND.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">104</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">full</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen8</arg>&apos; is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">102</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen8</arg>&apos; is tied to GND.
-</msg>
-
-<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">read_en</arg>&gt; in unit &lt;<arg fmt="%s" index="2">MIDIDecodeControl</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
+<msg type="warning" file="Xst" num="852" delta="old" >&quot;<arg fmt="%s" index="1">../../src/WaveGenController.v</arg>&quot; line <arg fmt="%d" index="2">104</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">reset</arg>&apos; of instance &apos;<arg fmt="%s" index="4">gen8</arg>&apos; is tied to GND.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ac97_sdata_in</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -113,64 +110,40 @@
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">reset_count</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">FIFOFull</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="2117" delta="old" >HDL ADVISOR - Mux Selector &lt;<arg fmt="%s" index="1">cs</arg>&gt; of Case statement line <arg fmt="%s" index="2">70</arg> was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-	- add an &apos;<arg fmt="%s" index="3">INIT</arg>&apos; attribute on signal &lt;<arg fmt="%s" index="4">cs</arg>&gt; (optimization is then done without any risk)
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">messageValid</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2117" delta="old" >HDL ADVISOR - Mux Selector &lt;<arg fmt="%s" index="1">state</arg>&gt; of Case statement line <arg fmt="%s" index="2">29</arg> was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+	- add an &apos;<arg fmt="%s" index="3">INIT</arg>&apos; attribute on signal &lt;<arg fmt="%s" index="4">state</arg>&gt; (optimization is then done without any risk)
 	- use the attribute &apos;<arg fmt="%s" index="5">signal_encoding</arg> <arg fmt="%s" index="6">user</arg>&apos; to avoid onehot optimization
 	- use the attribute &apos;<arg fmt="%s" index="7">safe_implementation</arg> <arg fmt="%s" index="8">yes</arg>&apos; to force XST to perform a safe (but less efficient) optimization
-</msg>
-
-<msg type="info" file="Xst" num="2117" delta="old" >HDL ADVISOR - Mux Selector &lt;<arg fmt="%s" index="1">cs</arg>&gt; of Case statement line <arg fmt="%s" index="2">70</arg> was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-	- add an &apos;<arg fmt="%s" index="3">INIT</arg>&apos; attribute on signal &lt;<arg fmt="%s" index="4">cs</arg>&gt; (optimization is then done without any risk)
-	- use the attribute &apos;<arg fmt="%s" index="5">signal_encoding</arg> <arg fmt="%s" index="6">user</arg>&apos; to avoid onehot optimization
-	- use the attribute &apos;<arg fmt="%s" index="7">safe_implementation</arg> <arg fmt="%s" index="8">yes</arg>&apos; to force XST to perform a safe (but less efficient) optimization
-</msg>
-
-<msg type="info" file="Xst" num="2117" delta="old" >HDL ADVISOR - Mux Selector &lt;<arg fmt="%s" index="1">cs</arg>&gt; of Case statement line <arg fmt="%s" index="2">70</arg> was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-	- add an &apos;<arg fmt="%s" index="3">INIT</arg>&apos; attribute on signal &lt;<arg fmt="%s" index="4">cs</arg>&gt; (optimization is then done without any risk)
-	- use the attribute &apos;<arg fmt="%s" index="5">signal_encoding</arg> <arg fmt="%s" index="6">user</arg>&apos; to avoid onehot optimization
-	- use the attribute &apos;<arg fmt="%s" index="7">safe_implementation</arg> <arg fmt="%s" index="8">yes</arg>&apos; to force XST to perform a safe (but less efficient) optimization
-</msg>
-
-<msg type="info" file="Xst" num="2117" delta="old" >HDL ADVISOR - Mux Selector &lt;<arg fmt="%s" index="1">cs</arg>&gt; of Case statement line <arg fmt="%s" index="2">70</arg> was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-	- add an &apos;<arg fmt="%s" index="3">INIT</arg>&apos; attribute on signal &lt;<arg fmt="%s" index="4">cs</arg>&gt; (optimization is then done without any risk)
-	- use the attribute &apos;<arg fmt="%s" index="5">signal_encoding</arg> <arg fmt="%s" index="6">user</arg>&apos; to avoid onehot optimization
-	- use the attribute &apos;<arg fmt="%s" index="7">safe_implementation</arg> <arg fmt="%s" index="8">yes</arg>&apos; to force XST to perform a safe (but less efficient) optimization
-</msg>
-
-<msg type="info" file="Xst" num="2117" delta="old" >HDL ADVISOR - Mux Selector &lt;<arg fmt="%s" index="1">cs</arg>&gt; of Case statement line <arg fmt="%s" index="2">70</arg> was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-	- add an &apos;<arg fmt="%s" index="3">INIT</arg>&apos; attribute on signal &lt;<arg fmt="%s" index="4">cs</arg>&gt; (optimization is then done without any risk)
-	- use the attribute &apos;<arg fmt="%s" index="5">signal_encoding</arg> <arg fmt="%s" index="6">user</arg>&apos; to avoid onehot optimization
-	- use the attribute &apos;<arg fmt="%s" index="7">safe_implementation</arg> <arg fmt="%s" index="8">yes</arg>&apos; to force XST to perform a safe (but less efficient) optimization
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">startGen</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">5</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ns</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">RXShift&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">veloc</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">writeThrough</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">result&lt;23:22&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">result3&lt;23&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">result&lt;3:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">result3&lt;4:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">result2&lt;23&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">result2&lt;4:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">result1&lt;23&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">result1&lt;4:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1872" delta="old" >Variable &lt;<arg fmt="%s" index="1">i</arg>&gt; is used but never assigned.
@@ -218,7 +191,7 @@
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">dataOutInt2&lt;6:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">constant2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">011101</arg>.
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">constant2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">011110</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">active</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -263,16 +236,13 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">GPIO_DIP</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">west2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">thirdByteControl</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">south2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">secondByteControl</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">prepped</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">north2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">newW</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -281,13 +251,10 @@
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">newS</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">newN</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">newE</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">messageType</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">messageType</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">go</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -299,10 +266,16 @@
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">frame_count</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">east2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">firstByteControl</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">decodeType</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">bit_count</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">MIDIValid</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">GPIO_COMPLED</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -312,6 +285,12 @@
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">FIFOOverflown</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">FIFOFull</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">FIFOEmpty</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">FIFOCount</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -330,10 +309,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">west_parse</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-It will be removed from the design.
-</msg>
-
-<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">north_parse</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
 It will be removed from the design.
 </msg>
 
@@ -391,80 +366,24 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">audio_left_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">codec_com</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">dec</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">dec</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">RXShift_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uareceive</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_result_mult0000</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_result1_mult0000</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
 </msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
 <msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_newData</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
 </msg>
 
 <msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_newConst</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
-</msg>
-
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Wgen/gen1/Mrom_dataIn_mux0001</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Wgen/gen2/Mrom_dataIn_mux0001</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Wgen/gen3/Mrom_dataIn_mux0001</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Wgen/gen4/Mrom_dataIn_mux0001</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Wgen/gen5/Mrom_dataIn_mux0001</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Wgen/gen6/Mrom_dataIn_mux0001</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Wgen/gen7/Mrom_dataIn_mux0001</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Wgen/gen8/Mrom_dataIn_mux0001</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Wgen/gen1/RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Wgen/gen2/RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Wgen/gen3/RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Wgen/gen4/RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Wgen/gen5/RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Wgen/gen6/RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Wgen/gen8/RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Wgen/gen7/RAM2/Mram_ram_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Wgen/gen1/Mmult_dataOutInt2</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
-</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Wgen/gen2/Mmult_dataOutInt2</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
-</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Wgen/gen3/Mmult_dataOutInt2</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
-</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Wgen/gen4/Mmult_dataOutInt2</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
-</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Wgen/gen5/Mmult_dataOutInt2</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
-</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Wgen/gen6/Mmult_dataOutInt2</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
-</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Wgen/gen7/Mmult_dataOutInt2</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
-</msg>
-
-<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Wgen/gen8/Mmult_dataOutInt2</arg> by adding <arg fmt="%d" index="2">2</arg> register level(s).
 </msg>
 
 <msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_ram</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -482,179 +401,23 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">audio_left_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Example</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Decoder</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">next_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Decoder</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">TXShift_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">UATransmit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Wgen/gen2/init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">ml505top</arg>.
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">WaveGen</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Wgen/gen3/init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">ml505top</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Wgen/gen4/init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">ml505top</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Wgen/gen5/init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">ml505top</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Wgen/gen6/init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">ml505top</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Wgen/gen7/init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">ml505top</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Wgen/gen8/init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">ml505top</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Wgen/gen1/init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">ml505top</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LPM_LATCH_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;6&gt; &lt;5&gt; &lt;4&gt; &lt;3&gt; &lt;2&gt; &lt;1&gt; &lt;0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LPM_LATCH_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;6&gt; &lt;5&gt; &lt;4&gt; &lt;3&gt; &lt;2&gt; &lt;1&gt; &lt;0&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/txreg/Out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">MIDIDec</arg> : the following signal(s) form a combinatorial loop: </msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/BitCounter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/BitCounter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/BitCounter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/BitCounter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
-</msg>
-
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
-</msg>
-
 </messages>
-

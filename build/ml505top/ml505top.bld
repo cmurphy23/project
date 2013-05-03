@@ -59,10 +59,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   1
 
-Total memory usage is 536840 kilobytes
+Total memory usage is 541548 kilobytes
 
 Writing NGD file "ml505top.ngd" ...
-Total REAL time to NGDBUILD completion:  30 sec
-Total CPU time to NGDBUILD completion:   29 sec
+Total REAL time to NGDBUILD completion:  32 sec
+Total CPU time to NGDBUILD completion:   32 sec
 
 Writing NGDBUILD log file "ml505top.bld"...

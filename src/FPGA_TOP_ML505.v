@@ -113,7 +113,10 @@ module ml505top (
    wire        messageType;
    wire [9:0]  delay;
    wire [7:0]  velocity;
-   wire        startWaveGen;
+   wire        noteOn;
+   reg 	       source = 0;
+   
+   
 
 
    
@@ -130,31 +133,15 @@ module ml505top (
    end
    
    
-   /*always  @(posedge clk) begin
+   always  @(posedge clk) begin
       if (newN) begin
-	 delay <= 109;
-	 noteOn <= 1;
+	 source <= ~source;
       end
-      else if (newS) begin
-	 delay <= 218;
-	 noteOn <= 1;
-      end
-      else if (newE) begin
-	 delay <= 55;
-	 noteOn <= 1;
-      end
-      else if (newW) begin
-	 delay <= 80;
-	 noteOn <= 1;
-      end
-      else
-	noteOn <= 0;
       north2 <= north;
       south2 <= south;
       east2 <= east;
-      west2 <= west;
-	 
-   end*/
+      west2 <= west;	 
+   end
 
    
 
@@ -175,7 +162,7 @@ module ml505top (
    
    
 
-   assign data = {delay,velocity,startWaveGen,DataIn,DataOut,DataOutValid,MIDI_IN,FIFORead,DataInValid,firstByteControl,secondByteControl,thirdByteControl};
+   assign data = {delay,velocity,noteOn,DataIn,DataOut,DataOutValid,MIDI_IN,FIFORead,DataInValid};
    
    
    chipscope_icon icon(
@@ -232,7 +219,8 @@ module ml505top (
 			  .delay(delay),
 			  .reset(rst),
 			  .velocity(velocity),
-			  .noteOn(startWaveGen));
+			  .noteOn(noteOn),
+			  .source(source));
 
 
     UART               #( .ClockFreq(       ClockFreq),
@@ -262,7 +250,7 @@ module ml505top (
 			 .valid(DataInValid),
 			 .data_count(FIFOCount));
 
-   MIDIDecodeDataPath MIDIDecodeDataPath(.Clock(clk),
+   /*MIDIDecodeDataPath MIDIDecodeDataPath(.Clock(clk),
 					 .Reset(rst),
 					 .message(DataIn),
 					 .decodeType(decodeType),
@@ -285,7 +273,12 @@ module ml505top (
 				       .firstByte(firstByteControl),
 				       .secondByte(secondByteControl),
 				       .thirdByte(thirdByteControl),
-				       .waveReady(startWaveGen));
+				       .waveReady(startWaveGen));*/
+
+   Decoder dec(.clk(clk),.rst(rst),.message(DataIn),.read(FIFORead),
+	       .dataValid(DataInValid),.delay(delay),.velocity(velocity),
+	       .noteOn(noteOn));
+   
    
    
    
@@ -300,7 +293,7 @@ module ml505top (
      else
        GPIO_COMPLED <= 1;*/
 
-   assign GPIO_COMPLED_C = MIDI_IN;
+   assign GPIO_COMPLED_C = source;
 
    
 

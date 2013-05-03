@@ -10,42 +10,43 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Thu May  2 02:57:26 2013
+Mapped Date    : Thu May  2 18:31:07 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  171
+Number of warnings:  182
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,177 out of  69,120    1%
-    Number used as Flip Flops:               1,146
-    Number used as Latches:                     15
+  Number of Slice Registers:                 1,219 out of  69,120    1%
+    Number used as Flip Flops:               1,202
+    Number used as Latches:                      1
     Number used as Latch-thrus:                 16
-  Number of Slice LUTs:                      2,937 out of  69,120    4%
-    Number used as logic:                    2,784 out of  69,120    4%
-      Number using O6 output only:           2,439
-      Number using O5 output only:             248
-      Number using O5 and O6:                   97
+  Number of Slice LUTs:                      4,404 out of  69,120    6%
+    Number used as logic:                    4,056 out of  69,120    5%
+      Number using O6 output only:           3,901
+      Number using O5 output only:              82
+      Number using O5 and O6:                   73
     Number used as Memory:                      96 out of  17,920    1%
       Number used as Dual Port RAM:             24
         Number using O6 output only:            24
       Number used as Shift Register:            72
         Number using O6 output only:            71
         Number using O5 output only:             1
-    Number used as exclusive route-thru:        57
-  Number of route-thrus:                       316
-    Number using O6 output only:               305
-    Number using O5 output only:                11
+    Number used as exclusive route-thru:       252
+  Number of route-thrus:                       355
+    Number using O6 output only:               332
+    Number using O5 output only:                21
+    Number using O5 and O6:                      2
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,302 out of  17,280    7%
-  Number of LUT Flip Flop pairs used:        3,202
-    Number with an unused Flip Flop:         2,025 out of   3,202   63%
-    Number with an unused LUT:                 265 out of   3,202    8%
-    Number of fully used LUT-FF pairs:         912 out of   3,202   28%
-    Number of unique control sets:             198
+  Number of occupied Slices:                 1,598 out of  17,280    9%
+  Number of LUT Flip Flop pairs used:        4,648
+    Number with an unused Flip Flop:         3,429 out of   4,648   73%
+    Number with an unused LUT:                 244 out of   4,648    5%
+    Number of fully used LUT-FF pairs:         975 out of   4,648   20%
+    Number of unique control sets:             189
     Number of slice register sites lost
-      to control set restrictions:             463 out of  69,120    1%
+      to control set restrictions:             441 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -70,14 +71,14 @@ Specific Feature Utilization:
   Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
     Number used as BUFGs:                        4
   Number of BSCANs:                              1 out of       4   25%
-  Number of DSP48Es:                            17 out of      64   26%
+  Number of DSP48Es:                            19 out of      64   29%
 
   Number of RPM macros:            6
-Average Fanout of Non-Clock Nets:                4.48
+Average Fanout of Non-Clock Nets:                5.05
 
-Peak Memory Usage:  1106 MB
-Total REAL time to MAP completion:  4 mins 1 secs 
-Total CPU time to MAP completion:   4 mins 1 secs 
+Peak Memory Usage:  1129 MB
+Total REAL time to MAP completion:  6 mins 11 secs 
+Total CPU time to MAP completion:   6 mins 10 secs 
 
 Table of Contents
 -----------------
@@ -1418,11 +1419,71 @@ WARNING:Pack:2874 - Trimming timing constraints from pin
    ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_C
    S_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U
    _RAMB36_REGCLKBL_tiesig
-WARNING:Pack:2573 - The F7 multiplexer symbol
-   "codec_com/Mmux__varindex0003_2_f71_f7" and its I0 input driver
-   "codec_com/Mmux__varindex0003_3" were implemented suboptimally in the same
-   slice component. The function generator could not be placed directly driving
-   the F7 multiplexer. The design will exhibit suboptimal timing.
+WARNING:Pack:2574 - The F7 multiplexer symbol
+   "Wgen/gen4/Mmult_dataIn_share0000_Madd3_lut<3>1451" and its I1 input driver
+   "XST_GND" were implemented suboptimally in the same slice component. The
+   function generator could not be placed directly driving the F7 multiplexer.
+   The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen6/Mmult_dataIn_share0000_Madd_12143_f7".  There are more
+   than two MUXF7 wide function muxes.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen4/dataIn_mux0000<13>31009_f7".  There are more than two
+   MUXF7 wide function muxes.  The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen5/Mmult_dataIn_share0000_Madd_72123_f7".  There are more
+   than two MUXF7 wide function muxes.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen5/Mmult_dataIn_share0000_Madd_93190_f7".  There are more
+   than two MUXF7 wide function muxes.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen8/dataIn_mux0000<14>69_f7".  There are more than two
+   MUXF7 wide function muxes.  The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen8/dataIn_mux0001<5>183_f7".  There are more than two
+   MUXF7 wide function muxes.  The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen3/Mmult_dataIn_share0000_Madd_1272_f7".  There are more
+   than two MUXF7 wide function muxes.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen2/Mmult_dataIn_share0000_Madd_1249_f7".  There are more
+   than two MUXF7 wide function muxes.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen7/Mmult_dataIn_share0000_Madd_7252_f7".  There are more
+   than two MUXF7 wide function muxes.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "uart/uareceive/RXShift_and000011_f7".  There are more than two
+   MUXF7 wide function muxes.  The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen8/dataIn_mux0001<5>97".  There are more than two MUXF7
+   wide function muxes.  The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/gen7/dataIn_mux0000<9>31132_f7".  There are more than two
+   MUXF7 wide function muxes.  The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "Wgen/glut/filterMul_cmp_le00001_f7".  There are more than two
+   MUXF7 wide function muxes.  The design will exhibit suboptimal timing.
+WARNING:Pack:1653 - At least one timing constraint is impossible to meet because
+   component delays alone exceed the constraint. A timing constraint summary
+   below shows the failing constraints (preceded with an Asterisk (*)). Please
+   use the Timing Analyzer (GUI) or TRCE (command line) with the Mapped NCD and
+   PCF files to identify which constraints and paths are failing because of the
+   component delays alone. If the failing path(s) is mapped to Xilinx components
+   as expected, consider relaxing the constraint. If it is not mapped to
+   components as expected, re-evaluate your HDL and how synthesis is optimizing
+   the path. To allow the tools to bypass this error, set the environment
+   variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+   For more information about the Timing Analyzer, consult the Xilinx Timing
+   Analyzer Reference manual; for more information on TRCE, consult the Xilinx
+   Command Line Tools User Guide "TRACE" chapter.
 WARNING:Place:644 - A clock IOB clock component is not placed at an optimal
    clock IOB site. The clock IOB component <MIDI_IN> is placed at site <AJ32>.
    The clock IO site can use the fast path between the IO and the Clock
@@ -1433,20 +1494,9 @@ WARNING:Place:644 - A clock IOB clock component is not placed at an optimal
    this override is highly discouraged as it may lead to very poor timing
    results. It is recommended that this error condition be corrected in the
    design.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net rst is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   MIDIDecodeControl/ns_not0001 is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net chipscope_control<13> is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   MIDIDecodeControl/startGen_not0001 is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
 WARNING:PhysDesignRules:367 - The signal
    <fifo_generator_v9_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_f
    ifo.gl0.wr/gwhf.whf/overflow_i_and0000> is incomplete. The signal does not
@@ -1459,7 +1509,7 @@ INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
 INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
 INFO:Security:56 - Part 'xc5vlx110t' is not a WebPack part.
 INFO:LIT:243 - Logical network chipscope_control<10> has no load.
-INFO:LIT:395 - The above info message is repeated 38 more times for the
+INFO:LIT:395 - The above info message is repeated 37 more times for the
    following (max. 5 shown):
    chipscope_control<11>,
    chipscope_control<15>,
@@ -1696,7 +1746,7 @@ Unused block "icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
-GND 		XST_GND
+VCC 		XST_VCC
 GND 		fifo_generator_v9_1/XST_GND
 VCC 		fifo_generator_v9_1/XST_VCC
 GND 		icon/XST_GND
@@ -1757,6 +1807,55 @@ VCC 		ila/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
+
+Section 11 - Timing Report
+--------------------------
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Number of Timing Constraints that were not applied: 2
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_USER_CLK = PERIOD TIMEGRP "USER_CLK" 1 | SETUP       |    -0.022ns|    10.022ns|      80|        1688
+  0 ns HIGH 50%                             | HOLD        |     0.120ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    13.874ns|     1.126ns|       0|           0
+   TO TIMEGRP "J_CLK" 15 ns                 | HOLD        |     0.512ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    14.487ns|     0.513ns|       0|           0
+   TO TIMEGRP "U_CLK" 15 ns                 | HOLD        |     0.219ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns H | SETUP       |    27.073ns|     2.927ns|       0|           0
+  IGH 50%                                   | HOLD        |     0.120ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_D2_TO_T2_path" TIG               | SETUP       |         N/A|     1.105ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_J2_TO_D2_path" TIG               | N/A         |         N/A|         N/A|     N/A|         N/A
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_J3_TO_D2_path" TIG               | N/A         |         N/A|         N/A|     N/A|         N/A
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_J4_TO_D2_path" TIG               | MAXDELAY    |         N/A|     0.638ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_J_TO_D_path" TIG                 | SETUP       |         N/A|     2.302ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_D_TO_J_path" TIG                 | SETUP       |         N/A|     1.061ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
 
 Section 6 - IOB Properties
 --------------------------

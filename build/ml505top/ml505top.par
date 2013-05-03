@@ -1,7 +1,7 @@
 Release 14.1 par P.15xf (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-p380-27.EECS.Berkeley.EDU::  Thu May 02 03:01:31 2013
+p380-27.EECS.Berkeley.EDU::  Thu May 02 18:37:22 2013
 
 par -w -ol high -mt off ml505top_map.ncd ml505top.ncd ml505top.pcf 
 
@@ -35,31 +35,30 @@ Device Utilization Summary:
 
    Number of BSCANs                          1 out of 4      25%
    Number of BUFGs                           4 out of 32     12%
-   Number of DSP48Es                        17 out of 64     26%
+   Number of DSP48Es                        19 out of 64     29%
    Number of External IOBs                  29 out of 640     4%
       Number of LOCed IOBs                  29 out of 29    100%
 
    Number of OLOGICs                         8 out of 800     1%
    Number of RAMB18X2s                       7 out of 148     4%
    Number of RAMB36_EXPs                    41 out of 148    27%
-   Number of Slices                       1302 out of 17280   7%
-   Number of Slice Registers              1177 out of 69120   1%
-      Number used as Flip Flops           1146
-      Number used as Latches                15
+   Number of Slices                       1598 out of 17280   9%
+   Number of Slice Registers              1219 out of 69120   1%
+      Number used as Flip Flops           1202
+      Number used as Latches                 1
       Number used as LatchThrus             16
 
-   Number of Slice LUTS                   2937 out of 69120   4%
-   Number of Slice LUT-Flip Flop pairs    3202 out of 69120   4%
+   Number of Slice LUTS                   4404 out of 69120   6%
+   Number of Slice LUT-Flip Flop pairs    4648 out of 69120   6%
 
 
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 38 secs 
-Finished initial Timing Analysis.  REAL time: 38 secs 
+Starting initial Timing Analysis.  REAL time: 41 secs 
+Finished initial Timing Analysis.  REAL time: 41 secs 
 
 WARNING:Par:288 - The signal GPIO_COMPSW_E_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal GPIO_COMPSW_N_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal GPIO_COMPSW_S_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal GPIO_COMPSW_W_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal GPIO_DIP<0>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -77,33 +76,33 @@ WARNING:Par:288 - The signal
 Starting Router
 
 
-Phase  1  : 21770 unrouted;      REAL time: 42 secs 
+Phase  1  : 30114 unrouted;      REAL time: 45 secs 
 
-Phase  2  : 17548 unrouted;      REAL time: 45 secs 
+Phase  2  : 26450 unrouted;      REAL time: 49 secs 
 
-Phase  3  : 5088 unrouted;      REAL time: 1 mins 13 secs 
+Phase  3  : 9075 unrouted;      REAL time: 1 mins 25 secs 
 
-Phase  4  : 5119 unrouted; (Setup:725536, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 32 secs 
-
-Updating file: ml505top.ncd with current fully routed design.
-
-Phase  5  : 0 unrouted; (Setup:763221, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 51 secs 
-
-Phase  6  : 0 unrouted; (Setup:743246, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 
+Phase  4  : 9124 unrouted; (Setup:773468, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 47 secs 
 
 Updating file: ml505top.ncd with current fully routed design.
 
-Phase  7  : 0 unrouted; (Setup:745414, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 55 secs 
+Phase  5  : 0 unrouted; (Setup:815020, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 10 secs 
+
+Phase  6  : 0 unrouted; (Setup:802495, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 33 secs 
 
 Updating file: ml505top.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Setup:727217, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 18 secs 
+Phase  7  : 0 unrouted; (Setup:802495, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 18 secs 
 
-Phase  9  : 0 unrouted; (Setup:727217, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 18 secs 
+Updating file: ml505top.ncd with current fully routed design.
 
-Phase 10  : 0 unrouted; (Setup:708765, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 22 secs 
-Total REAL time to Router completion: 3 mins 22 secs 
-Total CPU time to Router completion: 3 mins 34 secs 
+Phase  8  : 0 unrouted; (Setup:788858, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 55 secs 
+
+Phase  9  : 0 unrouted; (Setup:788858, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 55 secs 
+
+Phase 10  : 0 unrouted; (Setup:772592, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 
+Total REAL time to Router completion: 4 mins 
+Total CPU time to Router completion: 4 mins 13 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -121,27 +120,21 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
+|                 clk | BUFGCTRL_X0Y1| No   |  646 |  0.574     |  2.118      |
++---------------------+--------------+------+------+------------+-------------+
 |chipscope_control<0> |              |      |      |            |             |
-|                     | BUFGCTRL_X0Y1| No   |  128 |  0.636     |  2.190      |
+|                     | BUFGCTRL_X0Y0| No   |  127 |  0.595     |  2.118      |
 +---------------------+--------------+------+------+------------+-------------+
-|                 clk | BUFGCTRL_X0Y2| No   |  596 |  0.642     |  2.190      |
+|        MIDI_IN_IBUF | BUFGCTRL_X0Y3| No   |    9 |  0.348     |  2.046      |
 +---------------------+--------------+------+------+------------+-------------+
-| AUDIO_BIT_CLK_BUFGP | BUFGCTRL_X0Y3| No   |    5 |  0.030     |  1.651      |
-+---------------------+--------------+------+------+------------+-------------+
-| GPIO_COMPLED_C_OBUF | BUFGCTRL_X0Y0| No   |    9 |  0.348     |  2.046      |
-+---------------------+--------------+------+------+------------+-------------+
-|                 rst |         Local|      |   75 |  1.011     |  1.983      |
-+---------------------+--------------+------+------+------------+-------------+
-| icon/U0/iUPDATE_OUT |         Local|      |    1 |  0.000     |  0.670      |
-+---------------------+--------------+------+------+------------+-------------+
-|MIDIDecodeControl/ns |              |      |      |            |             |
-|            _not0001 |         Local|      |    2 |  0.007     |  0.462      |
+| AUDIO_BIT_CLK_BUFGP | BUFGCTRL_X0Y2| No   |    5 |  0.050     |  1.755      |
 +---------------------+--------------+------+------+------------+-------------+
 |chipscope_control<13 |              |      |      |            |             |
-|                   > |         Local|      |    5 |  0.000     |  0.839      |
+|                   > |         Local|      |    5 |  0.000     |  0.691      |
 +---------------------+--------------+------+------+------------+-------------+
-|MIDIDecodeControl/st |              |      |      |            |             |
-|      artGen_not0001 |         Local|      |    1 |  0.000     |  0.454      |
+|                  N0 |         Local|      | 1018 |  1.040     |  3.182      |
++---------------------+--------------+------+------+------------+-------------+
+| icon/U0/iUPDATE_OUT |         Local|      |    1 |  0.000     |  0.917      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -152,7 +145,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 708765 (Setup: 708765, Hold: 0, Component Switching Limit: 0)
+Timing Score: 772592 (Setup: 772592, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
    your design.
@@ -180,29 +173,29 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_USER_CLK = PERIOD TIMEGRP "USER_CLK" 1 | SETUP       |    -4.542ns|    14.542ns|     244|      708765
-  0 ns HIGH 50%                             | HOLD        |     0.285ns|            |       0|           0
+* TS_USER_CLK = PERIOD TIMEGRP "USER_CLK" 1 | SETUP       |    -4.868ns|    14.868ns|     268|      772592
+  0 ns HIGH 50%                             | HOLD        |     0.290ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    12.411ns|     2.589ns|       0|           0
-   TO TIMEGRP "J_CLK" 15 ns                 | HOLD        |     1.601ns|            |       0|           0
+  TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    12.320ns|     2.680ns|       0|           0
+   TO TIMEGRP "J_CLK" 15 ns                 | HOLD        |     1.412ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    14.103ns|     0.897ns|       0|           0
-   TO TIMEGRP "U_CLK" 15 ns                 | HOLD        |     0.568ns|            |       0|           0
+  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    14.128ns|     0.872ns|       0|           0
+   TO TIMEGRP "U_CLK" 15 ns                 | HOLD        |     0.549ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns H | SETUP       |    18.733ns|    11.267ns|       0|           0
-  IGH 50%                                   | HOLD        |     0.472ns|            |       0|           0
+  TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 ns H | SETUP       |    16.976ns|    13.024ns|       0|           0
+  IGH 50%                                   | HOLD        |     0.473ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_D2_TO_T2_path" TIG               | SETUP       |         N/A|     2.301ns|     N/A|           0
+  PATH "TS_D2_TO_T2_path" TIG               | SETUP       |         N/A|     2.992ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
   PATH "TS_J2_TO_D2_path" TIG               | N/A         |         N/A|         N/A|     N/A|         N/A
 ----------------------------------------------------------------------------------------------------------
   PATH "TS_J3_TO_D2_path" TIG               | N/A         |         N/A|         N/A|     N/A|         N/A
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_J4_TO_D2_path" TIG               | MAXDELAY    |         N/A|     4.034ns|     N/A|           0
+  PATH "TS_J4_TO_D2_path" TIG               | MAXDELAY    |         N/A|     3.442ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_J_TO_D_path" TIG                 | SETUP       |         N/A|     3.248ns|     N/A|           0
+  PATH "TS_J_TO_D_path" TIG                 | SETUP       |         N/A|     2.967ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_D_TO_J_path" TIG                 | SETUP       |         N/A|     3.017ns|     N/A|           0
+  PATH "TS_D_TO_J_path" TIG                 | SETUP       |         N/A|     2.647ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -218,19 +211,19 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 14 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 13 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 3 mins 35 secs 
-Total CPU time to PAR completion: 3 mins 46 secs 
+Total REAL time to PAR completion: 4 mins 14 secs 
+Total CPU time to PAR completion: 4 mins 27 secs 
 
-Peak Memory Usage:  1004 MB
+Peak Memory Usage:  1039 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 244 errors found.
+Timing: Completed - 268 errors found.
 
 Number of error messages: 0
-Number of warning messages: 17
+Number of warning messages: 16
 Number of info messages: 0
 
 Writing design to file ml505top.ncd

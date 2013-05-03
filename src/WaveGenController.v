@@ -1,4 +1,4 @@
-module WaveGenController (clk,ready,received,dataOut,delay,reset,velocity,noteOn);
+module WaveGenController (clk,ready,received,dataOut,delay,reset,velocity,noteOn,source);
    input clk;
    input received;
    output ready;
@@ -7,6 +7,8 @@ module WaveGenController (clk,ready,received,dataOut,delay,reset,velocity,noteOn
    input 	 reset;
    input [7:0] 	 velocity;
    input 	 noteOn;
+   input 	 source;
+   
    
    
 
@@ -85,21 +87,21 @@ module WaveGenController (clk,ready,received,dataOut,delay,reset,velocity,noteOn
    
    GainLUT glut(.delay(delay),.filterMul(gain));
 
-   WaveGen gen1(.clk(clk),.ready(ready1),.received(received),.dataOut(dataOut1),.delay(delay),.velocity(velocity),.prepped(prepped1),.go(go1),.gain(gain));
+   WaveGen gen1(.clk(clk),.ready(ready1),.received(received),.dataOut(dataOut1),.delay(delay),.velocity(velocity),.prepped(prepped1),.go(go1),.gain(gain),.source(source));
 
-   WaveGen gen2(.clk(clk),.ready(ready2),.received(received),.dataOut(dataOut2),.delay(delay),.velocity(velocity),.prepped(prepped2),.go(go2),.gain(gain));
+   WaveGen gen2(.clk(clk),.ready(ready2),.received(received),.dataOut(dataOut2),.delay(delay),.velocity(velocity),.prepped(prepped2),.go(go2),.gain(gain),.source(source));
 
-   WaveGen gen3(.clk(clk),.ready(ready3),.received(received),.dataOut(dataOut3),.delay(delay),.velocity(velocity),.prepped(prepped3),.go(go3),.gain(gain));
+   WaveGen gen3(.clk(clk),.ready(ready3),.received(received),.dataOut(dataOut3),.delay(delay),.velocity(velocity),.prepped(prepped3),.go(go3),.gain(gain),.source(source));
 
-   WaveGen gen4(.clk(clk),.ready(ready4),.received(received),.dataOut(dataOut4),.delay(delay),.velocity(velocity),.prepped(prepped4),.go(go4),.gain(gain));
+   WaveGen gen4(.clk(clk),.ready(ready4),.received(received),.dataOut(dataOut4),.delay(delay),.velocity(velocity),.prepped(prepped4),.go(go4),.gain(gain),.source(source));
 
-   WaveGen gen5(.clk(clk),.ready(ready5),.received(received),.dataOut(dataOut5),.delay(delay),.velocity(velocity),.prepped(prepped5),.go(go5),.gain(gain));
+   WaveGen gen5(.clk(clk),.ready(ready5),.received(received),.dataOut(dataOut5),.delay(delay),.velocity(velocity),.prepped(prepped5),.go(go5),.gain(gain),.source(source));
 
-   WaveGen gen6(.clk(clk),.ready(ready6),.received(received),.dataOut(dataOut6),.delay(delay),.velocity(velocity),.prepped(prepped6),.go(go6),.gain(gain));
+   WaveGen gen6(.clk(clk),.ready(ready6),.received(received),.dataOut(dataOut6),.delay(delay),.velocity(velocity),.prepped(prepped6),.go(go6),.gain(gain),.source(source));
 
-   WaveGen gen7(.clk(clk),.ready(ready7),.received(received),.dataOut(dataOut7),.delay(delay),.velocity(velocity),.prepped(prepped7),.go(go7),.gain(gain));
+   WaveGen gen7(.clk(clk),.ready(ready7),.received(received),.dataOut(dataOut7),.delay(delay),.velocity(velocity),.prepped(prepped7),.go(go7),.gain(gain),.source(source));
 
-   WaveGen gen8(.clk(clk),.ready(ready8),.received(received),.dataOut(dataOut8),.delay(delay),.velocity(velocity),.prepped(prepped8),.go(go8),.gain(gain));
+   WaveGen gen8(.clk(clk),.ready(ready8),.received(received),.dataOut(dataOut8),.delay(delay),.velocity(velocity),.prepped(prepped8),.go(go8),.gain(gain),.source(source));
 
 
 

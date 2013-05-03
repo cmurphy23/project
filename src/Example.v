@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+ `timescale 1ns / 1ps
 
 module Example (clock, audio_reset_b, ac97_sdata_out, ac97_sdata_in,
 		      ac97_synch, ac97_bit_clock, reset, bit_count, frame_count,audio_in,audio_valid,ack);
@@ -147,8 +147,8 @@ module Example (clock, audio_reset_b, ac97_sdata_out, ac97_sdata_in,
 
    always @(frame_count) begin
       case (frame_count)
-	4'h1: command = 24'h02_7FFF; // Unmute line outputs
-	4'h2: command = 24'h04_7FFF; // Unmute headphones
+	4'h1: command = 24'h02_0303; // Unmute line outputs
+	4'h2: command = 24'h04_0707; // Unmute headphones
 	4'h3: command = 24'h18_0000;
 	4'h4: command = 24'h20_8000;
 	4'h5: command = 24'h0C_8000;
