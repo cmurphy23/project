@@ -420,4 +420,113 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/txreg/Out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/BitCounter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/BitCounter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/BitCounter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/BitCounter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/ClockCounter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uart/uatransmit/TXShift_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/read_a_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Abuf/RAM/Mram_ram5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ml505top</arg>&gt;.
+</msg>
+
 </messages>
+

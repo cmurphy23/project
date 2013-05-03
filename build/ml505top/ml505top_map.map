@@ -10,7 +10,7 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Thu May  2 18:31:07 2013
+Mapped Date    : Thu May  2 18:59:17 2013
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
@@ -1458,26 +1458,26 @@ INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 1 mins 8 secs 
-Total CPU  time at the beginning of Placer: 1 mins 7 secs 
+Total REAL time at the beginning of Placer: 1 mins 6 secs 
+Total CPU  time at the beginning of Placer: 1 mins 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:12ce27d5) REAL time: 1 mins 14 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:f9e4bf80) REAL time: 1 mins 11 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:12ce27d5) REAL time: 1 mins 14 secs 
+Phase 2.7  Design Feasibility Check (Checksum:f9e4bf80) REAL time: 1 mins 12 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:9d3e0515) REAL time: 1 mins 14 secs 
+Phase 3.31  Local Placement Optimization (Checksum:251c8b50) REAL time: 1 mins 12 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:9d3e0515) REAL time: 1 mins 14 secs 
+Phase 4.37  Local Placement Optimization (Checksum:251c8b50) REAL time: 1 mins 12 secs 
 
 Phase 5.33  Local Placement Optimization
-Phase 5.33  Local Placement Optimization (Checksum:9d3e0515) REAL time: 2 mins 24 secs 
+Phase 5.33  Local Placement Optimization (Checksum:251c8b50) REAL time: 2 mins 15 secs 
 
 Phase 6.32  Local Placement Optimization
-Phase 6.32  Local Placement Optimization (Checksum:9d3e0515) REAL time: 2 mins 25 secs 
+Phase 6.32  Local Placement Optimization (Checksum:251c8b50) REAL time: 2 mins 16 secs 
 
 Phase 7.2  Initial Clock and IO Placement
 
@@ -1492,46 +1492,46 @@ WARNING:Place:644 - A clock IOB clock component is not placed at an optimal
    this override is highly discouraged as it may lead to very poor timing
    results. It is recommended that this error condition be corrected in the
    design.
-Phase 7.2  Initial Clock and IO Placement (Checksum:3ec6f32f) REAL time: 2 mins 26 secs 
+Phase 7.2  Initial Clock and IO Placement (Checksum:9d1ee05a) REAL time: 2 mins 18 secs 
 
 Phase 8.36  Local Placement Optimization
-Phase 8.36  Local Placement Optimization (Checksum:3ec6f32f) REAL time: 2 mins 26 secs 
+Phase 8.36  Local Placement Optimization (Checksum:9d1ee05a) REAL time: 2 mins 18 secs 
 
 Phase 9.30  Global Clock Region Assignment
-Phase 9.30  Global Clock Region Assignment (Checksum:3ec6f32f) REAL time: 2 mins 27 secs 
+Phase 9.30  Global Clock Region Assignment (Checksum:9d1ee05a) REAL time: 2 mins 18 secs 
 
 Phase 10.3  Local Placement Optimization
-Phase 10.3  Local Placement Optimization (Checksum:3ec6f32f) REAL time: 2 mins 27 secs 
+Phase 10.3  Local Placement Optimization (Checksum:9d1ee05a) REAL time: 2 mins 18 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:3ec6f32f) REAL time: 2 mins 27 secs 
+Phase 11.5  Local Placement Optimization (Checksum:9d1ee05a) REAL time: 2 mins 18 secs 
 
 Phase 12.8  Global Placement
-......................................................................................................................
-...........
-.........................................................................................................................................
-................
-................
-...............................
-Phase 12.8  Global Placement (Checksum:a98a4fb8) REAL time: 3 mins 13 secs 
+......................................................
+..............................................................
+...................................................
+..................................................................
+.............................................................................................
+......................................................................................
+Phase 12.8  Global Placement (Checksum:db68ff60) REAL time: 3 mins 5 secs 
 
 Phase 13.29  Local Placement Optimization
-Phase 13.29  Local Placement Optimization (Checksum:a98a4fb8) REAL time: 3 mins 13 secs 
+Phase 13.29  Local Placement Optimization (Checksum:db68ff60) REAL time: 3 mins 5 secs 
 
 Phase 14.5  Local Placement Optimization
-Phase 14.5  Local Placement Optimization (Checksum:a98a4fb8) REAL time: 3 mins 14 secs 
+Phase 14.5  Local Placement Optimization (Checksum:db68ff60) REAL time: 3 mins 6 secs 
 
 Phase 15.18  Placement Optimization
-Phase 15.18  Placement Optimization (Checksum:f43ea17b) REAL time: 5 mins 57 secs 
+Phase 15.18  Placement Optimization (Checksum:71c0939) REAL time: 6 mins 32 secs 
 
 Phase 16.5  Local Placement Optimization
-Phase 16.5  Local Placement Optimization (Checksum:f43ea17b) REAL time: 5 mins 58 secs 
+Phase 16.5  Local Placement Optimization (Checksum:71c0939) REAL time: 6 mins 32 secs 
 
 Phase 17.34  Placement Validation
-Phase 17.34  Placement Validation (Checksum:f43ea17b) REAL time: 5 mins 58 secs 
+Phase 17.34  Placement Validation (Checksum:71c0939) REAL time: 6 mins 33 secs 
 
-Total REAL time to Placer completion: 5 mins 59 secs 
-Total CPU  time to Placer completion: 5 mins 59 secs 
+Total REAL time to Placer completion: 6 mins 34 secs 
+Total CPU  time to Placer completion: 6 mins 33 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:372 - Gated clock. Clock net chipscope_control<13> is
@@ -1549,13 +1549,13 @@ Design Summary:
 Number of errors:      0
 Number of warnings:  182
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,219 out of  69,120    1%
-    Number used as Flip Flops:               1,202
+  Number of Slice Registers:                 1,183 out of  69,120    1%
+    Number used as Flip Flops:               1,166
     Number used as Latches:                      1
     Number used as Latch-thrus:                 16
-  Number of Slice LUTs:                      4,404 out of  69,120    6%
-    Number used as logic:                    4,056 out of  69,120    5%
-      Number using O6 output only:           3,901
+  Number of Slice LUTs:                      4,359 out of  69,120    6%
+    Number used as logic:                    4,012 out of  69,120    5%
+      Number using O6 output only:           3,857
       Number using O5 output only:              82
       Number using O5 and O6:                   73
     Number used as Memory:                      96 out of  17,920    1%
@@ -1564,18 +1564,18 @@ Slice Logic Utilization:
       Number used as Shift Register:            72
         Number using O6 output only:            71
         Number using O5 output only:             1
-    Number used as exclusive route-thru:       252
-  Number of route-thrus:                       355
-    Number using O6 output only:               332
-    Number using O5 output only:                21
+    Number used as exclusive route-thru:       251
+  Number of route-thrus:                       356
+    Number using O6 output only:               331
+    Number using O5 output only:                23
     Number using O5 and O6:                      2
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,598 out of  17,280    9%
-  Number of LUT Flip Flop pairs used:        4,648
-    Number with an unused Flip Flop:         3,429 out of   4,648   73%
-    Number with an unused LUT:                 244 out of   4,648    5%
-    Number of fully used LUT-FF pairs:         975 out of   4,648   20%
+  Number of occupied Slices:                 1,777 out of  17,280   10%
+  Number of LUT Flip Flop pairs used:        4,608
+    Number with an unused Flip Flop:         3,425 out of   4,608   74%
+    Number with an unused LUT:                 249 out of   4,608    5%
+    Number of fully used LUT-FF pairs:         934 out of   4,608   20%
     Number of unique control sets:             189
     Number of slice register sites lost
       to control set restrictions:             441 out of  69,120    1%
@@ -1594,8 +1594,8 @@ IO Utilization:
     IOB Latches:                                 8
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      48 out of     148   32%
-    Number using BlockRAM only:                 48
+  Number of BlockRAM/FIFO:                      47 out of     148   31%
+    Number using BlockRAM only:                 47
     Total primitives used:
       Number of 36k BlockRAM used:              41
       Number of 18k BlockRAM used:               9
@@ -1603,14 +1603,14 @@ Specific Feature Utilization:
   Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
     Number used as BUFGs:                        4
   Number of BSCANs:                              1 out of       4   25%
-  Number of DSP48Es:                            19 out of      64   29%
+  Number of DSP48Es:                            17 out of      64   26%
 
   Number of RPM macros:            6
-Average Fanout of Non-Clock Nets:                5.05
+Average Fanout of Non-Clock Nets:                5.13
 
-Peak Memory Usage:  1129 MB
-Total REAL time to MAP completion:  6 mins 11 secs 
-Total CPU time to MAP completion:   6 mins 10 secs 
+Peak Memory Usage:  1127 MB
+Total REAL time to MAP completion:  6 mins 44 secs 
+Total CPU time to MAP completion:   6 mins 43 secs 
 
 Mapping completed.
 See MAP report file "ml505top_map.mrp" for details.

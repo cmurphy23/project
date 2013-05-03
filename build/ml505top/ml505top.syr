@@ -910,3 +910,398 @@ Optimizing unit <UAReceive> ...
 Optimizing unit <AudioBuffer> ...
 
 Optimizing unit <WaveGenController> ...
+WARNING:Xst:2677 - Node <uart/uatransmit/BitCounter_2> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/BitCounter_1> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/BitCounter_3> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/BitCounter_0> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_10> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_9> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_8> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_7> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_6> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_5> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_4> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_3> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_2> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_1> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/ClockCounter_0> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_8> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_7> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_6> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_5> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_4> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_3> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_2> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_1> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <uart/uatransmit/TXShift_0> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/read_a_0> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/read_a_1> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/read_a_2> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/read_a_3> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/read_a_4> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/read_a_5> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram3> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram1> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram2> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram6> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram4> of sequential type is unconnected in block <ml505top>.
+WARNING:Xst:2677 - Node <Abuf/RAM/Mram_ram5> of sequential type is unconnected in block <ml505top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ml505top, actual ratio is 9.
+Latch LED_7 has been replicated 7 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <ml505top> :
+	Found 2-bit shift register for signal <uart/uareceive/RXShift_8>.
+	Found 2-bit shift register for signal <Abuf/syncReset>.
+Unit <ml505top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 784
+ Flip-Flops                                            : 784
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ml505top.ngr
+Top Level Output File Name         : ml505top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 29
+
+Cell Usage :
+# BELS                             : 6383
+#      GND                         : 1
+#      INV                         : 83
+#      LUT1                        : 211
+#      LUT2                        : 490
+#      LUT3                        : 373
+#      LUT4                        : 484
+#      LUT5                        : 669
+#      LUT6                        : 1735
+#      MUXCY                       : 916
+#      MUXF7                       : 451
+#      MUXF8                       : 24
+#      VCC                         : 1
+#      XORCY                       : 945
+# FlipFlops/Latches                : 794
+#      FD                          : 95
+#      FDCE                        : 4
+#      FDE                         : 454
+#      FDP                         : 8
+#      FDR                         : 56
+#      FDRE                        : 161
+#      FDRSE                       : 4
+#      FDS                         : 2
+#      FDSE                        : 2
+#      LDP_1                       : 8
+# RAMS                             : 14
+#      RAM64M                      : 6
+#      RAMB18                      : 8
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      OBUF                        : 12
+# DSPs                             : 17
+#      DSP48E                      : 17
+# Others                           : 3
+#      chipscope_icon              : 1
+#      chipscope_ila               : 1
+#      fifo_generator_v9_1         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             786  out of  69120     1%  
+ Number of Slice LUTs:                 4071  out of  69120     5%  
+    Number used as Logic:              4045  out of  69120     5%  
+    Number used as Memory:               26  out of  17920     0%  
+       Number used as RAM:               24
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4163
+   Number with an unused Flip Flop:    3377  out of   4163    81%  
+   Number with an unused LUT:            92  out of   4163     2%  
+   Number of fully used LUT-FF pairs:   694  out of   4163    16%  
+   Number of unique control sets:       128
+
+IO Utilization: 
+ Number of IOs:                          29
+ Number of bonded IOBs:                  17  out of    640     2%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                4  out of    148     2%  
+    Number using Block RAM only:          4
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+ Number of DSP48Es:                      17  out of     64    26%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+USER_CLK                           | IBUFG+BUFG             | 797   |
+MIDI_IN                            | IBUF+BUFG              | 8     |
+AUDIO_BIT_CLK                      | BUFGP                  | 14    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst(rst_parse/out68:O)             | NONE(LED_7)            | 20    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 13.398ns (Maximum Frequency: 74.640MHz)
+   Minimum input arrival time before clock: 2.414ns
+   Maximum output required time after clock: 5.320ns
+   Maximum combinational path delay: 0.458ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'USER_CLK'
+  Clock period: 13.398ns (frequency: 74.640MHz)
+  Total number of paths / destination ports: 381626145 / 2093
+-------------------------------------------------------------------------
+Delay:               13.398ns (Levels of Logic = 26)
+  Source:            dec/velocity_7 (FF)
+  Destination:       Abuf/writeData_17 (FF)
+  Source Clock:      USER_CLK rising
+  Destination Clock: USER_CLK rising
+
+  Data Path: dec/velocity_7 to Abuf/writeData_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.471   0.989  dec/velocity_7 (dec/velocity_7)
+     LUT5:I0->O            2   0.094   0.581  Wgen/gen1/volumeIn<6>41 (Wgen/gen1/volumeIn<6>_bdd1)
+     LUT5:I3->O           88   0.094   0.474  Wgen/gen1/volumeIn<7>11 (Wgen/gen1/volumeIn<7>)
+     DSP48E:B7->P8         3   3.646   0.721  Wgen/gen1/Mmult_dataOutInt2 (Wgen/dataOut1<1>)
+     LUT6:I3->O            1   0.094   0.480  Wgen/Madd_dataOut_addsub0001C1 (Wgen/Madd_dataOut_addsub0001C)
+     LUT6:I5->O            1   0.094   0.000  Wgen/Madd_dataOut_addsub0001_Madd_lut<2> (Wgen/Madd_dataOut_addsub0001_Madd_lut<2>)
+     MUXCY:S->O            1   0.372   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<2> (Wgen/Madd_dataOut_addsub0001_Madd_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<3> (Wgen/Madd_dataOut_addsub0001_Madd_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<4> (Wgen/Madd_dataOut_addsub0001_Madd_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<5> (Wgen/Madd_dataOut_addsub0001_Madd_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<6> (Wgen/Madd_dataOut_addsub0001_Madd_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<7> (Wgen/Madd_dataOut_addsub0001_Madd_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<8> (Wgen/Madd_dataOut_addsub0001_Madd_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<9> (Wgen/Madd_dataOut_addsub0001_Madd_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<10> (Wgen/Madd_dataOut_addsub0001_Madd_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  Wgen/Madd_dataOut_addsub0001_Madd_cy<11> (Wgen/Madd_dataOut_addsub0001_Madd_cy<11>)
+     XORCY:CI->O           3   0.357   0.587  Wgen/Madd_dataOut_addsub0001_Madd_xor<12> (Wgen/dataOut_addsub0001<12>)
+     LUT4:I2->O            1   0.094   0.000  Wgen/Madd_dataOut_addsub0003_Madd_lut<13> (Wgen/Madd_dataOut_addsub0003_Madd_lut<13>)
+     MUXCY:S->O            1   0.372   0.000  Wgen/Madd_dataOut_addsub0003_Madd_cy<13> (Wgen/Madd_dataOut_addsub0003_Madd_cy<13>)
+     XORCY:CI->O           3   0.357   0.587  Wgen/Madd_dataOut_addsub0003_Madd_xor<14> (Wgen/dataOut_addsub0003<14>)
+     LUT4:I2->O            1   0.094   0.000  Wgen/Madd_dataOut_addsub0005_Madd_lut<15> (Wgen/Madd_dataOut_addsub0005_Madd_lut<15>)
+     MUXCY:S->O            1   0.372   0.000  Wgen/Madd_dataOut_addsub0005_Madd_cy<15> (Wgen/Madd_dataOut_addsub0005_Madd_cy<15>)
+     XORCY:CI->O           1   0.357   0.480  Wgen/Madd_dataOut_addsub0005_Madd_xor<16> (Wgen/dataOut_addsub0005<16>)
+     LUT3:I2->O            1   0.094   0.000  Wgen/Madd_dataOut_lut<16> (Wgen/Madd_dataOut_lut<16>)
+     MUXCY:S->O            0   0.372   0.000  Wgen/Madd_dataOut_cy<16> (Wgen/Madd_dataOut_cy<16>)
+     XORCY:CI->O           1   0.357   0.480  Wgen/Madd_dataOut_xor<17> (datain_rnm0<17>)
+     LUT3:I2->O            1   0.094   0.000  Abuf/writeData_mux0000<17>1 (Abuf/writeData_mux0000<17>)
+     FDE:D                    -0.018          Abuf/writeData_17
+    ----------------------------------------
+    Total                     13.398ns (8.019ns logic, 5.379ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'AUDIO_BIT_CLK'
+  Clock period: 5.477ns (frequency: 182.582MHz)
+  Total number of paths / destination ports: 251 / 19
+-------------------------------------------------------------------------
+Delay:               5.477ns (Levels of Logic = 6)
+  Source:            codec_com/bit_count_2 (FF)
+  Destination:       codec_com/ac97_sdata_out (FF)
+  Source Clock:      AUDIO_BIT_CLK rising
+  Destination Clock: AUDIO_BIT_CLK rising
+
+  Data Path: codec_com/bit_count_2 to codec_com/ac97_sdata_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             18   0.471   1.162  codec_com/bit_count_2 (codec_com/bit_count_2)
+     LUT6:I0->O            1   0.094   0.973  codec_com/Mmux__varindex0003_91 (codec_com/Mmux__varindex0003_91)
+     LUT6:I1->O            3   0.094   0.587  codec_com/Mmux__varindex0003_2_f71_SW0 (N1091)
+     LUT3:I1->O            3   0.094   0.984  codec_com/Mmux__varindex0003_2_f71 (codec_com/_varindex0003)
+     LUT5:I0->O            1   0.094   0.576  codec_com/ac97_sdata_out_mux00001702 (codec_com/ac97_sdata_out_mux00001702)
+     LUT6:I4->O            1   0.094   0.000  codec_com/ac97_sdata_out_mux00001930_G (N1626)
+     MUXF7:I1->O           1   0.254   0.000  codec_com/ac97_sdata_out_mux00001930 (codec_com/ac97_sdata_out_mux0000)
+     FDE:D                    -0.018          codec_com/ac97_sdata_out
+    ----------------------------------------
+    Total                      5.477ns (1.195ns logic, 4.282ns route)
+                                       (21.8% logic, 78.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'USER_CLK'
+  Total number of paths / destination ports: 274 / 92
+-------------------------------------------------------------------------
+Offset:              2.414ns (Levels of Logic = 2)
+  Source:            GPIO_COMPSW_C (PAD)
+  Destination:       rst_parse/count_0 (FF)
+  Destination Clock: USER_CLK rising
+
+  Data Path: GPIO_COMPSW_C to rst_parse/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.818   0.336  GPIO_COMPSW_C_IBUF (GPIO_COMPSW_C_IBUF)
+     INV:I->O             22   0.238   0.449  GPIO_COMPSW_C_inv1_INV_0 (GPIO_COMPSW_C_inv)
+     FDR:R                     0.573          rst_parse/count_0
+    ----------------------------------------
+    Total                      2.414ns (1.629ns logic, 0.785ns route)
+                                       (67.5% logic, 32.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'AUDIO_BIT_CLK'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.259ns (Levels of Logic = 1)
+  Source:            codec_com/ac97_sdata_out (FF)
+  Destination:       AUDIO_SDATA_OUT (PAD)
+  Source Clock:      AUDIO_BIT_CLK rising
+
+  Data Path: codec_com/ac97_sdata_out to AUDIO_SDATA_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.471   0.336  codec_com/ac97_sdata_out (codec_com/ac97_sdata_out)
+     OBUF:I->O                 2.452          AUDIO_SDATA_OUT_OBUF (AUDIO_SDATA_OUT)
+    ----------------------------------------
+    Total                      3.259ns (2.923ns logic, 0.336ns route)
+                                       (89.7% logic, 10.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'USER_CLK'
+  Total number of paths / destination ports: 92 / 42
+-------------------------------------------------------------------------
+Offset:              5.320ns (Levels of Logic = 3)
+  Source:            rst_parse/count_4 (FF)
+  Destination:       FLASH_AUDIO_RESET_B (PAD)
+  Source Clock:      USER_CLK rising
+
+  Data Path: rst_parse/count_4 to FLASH_AUDIO_RESET_B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.471   1.074  rst_parse/count_4 (rst_parse/count_4)
+     LUT6:I0->O            2   0.094   0.794  rst_parse/out10 (rst_parse/out10)
+     LUT4:I0->O            2   0.094   0.341  codec_com/audio_reset_b1 (FLASH_AUDIO_RESET_B_OBUF)
+     OBUF:I->O                 2.452          FLASH_AUDIO_RESET_B_OBUF (FLASH_AUDIO_RESET_B)
+    ----------------------------------------
+    Total                      5.320ns (3.111ns logic, 2.209ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'MIDI_IN'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.520ns (Levels of Logic = 1)
+  Source:            LED_7_1 (LATCH)
+  Destination:       GPIO_LED<7> (PAD)
+  Source Clock:      MIDI_IN rising
+
+  Data Path: LED_7_1 to GPIO_LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP_1:G->Q            1   0.732   0.336  LED_7_1 (LED_7_1)
+     OBUF:I->O                 2.452          GPIO_LED_7_OBUF (GPIO_LED<7>)
+    ----------------------------------------
+    Total                      3.520ns (3.184ns logic, 0.336ns route)
+                                       (90.5% logic, 9.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Delay:               0.458ns (Levels of Logic = 0)
+  Source:            fifo_generator_v9_1:dout<7> (PAD)
+  Destination:       ila:DATA<19> (PAD)
+
+  Data Path: fifo_generator_v9_1:dout<7> to ila:DATA<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    fifo_generator_v9_1:dout<7>   24   0.000   0.458  fifo_generator_v9_1 (DataIn<7>)
+    chipscope_ila:DATA<19>        0.000          ila
+    ----------------------------------------
+    Total                      0.458ns (0.000ns logic, 0.458ns route)
+                                       (0.0% logic, 100.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 679.00 secs
+Total CPU time to Xst completion: 676.97 secs
+ 
+--> 
+
+
+Total memory usage is 1311816 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  151 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+
